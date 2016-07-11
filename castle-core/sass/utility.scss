@@ -1,0 +1,42 @@
+/* Floating classes */
+.fl { float: left; }
+.fr { float: right; }
+.fn { float: none; }
+
+/* Clearfix */
+.cf:before, .cf:after, ul.fields > li:before, ul.fields > li:after {content:"";display:table;}
+.cf:after, .g:after, ul.fields > li:after {clear:both;}
+.cl { clear:both;height:0;overflow:hidden;visibility:hidden;font:0/0 x; }
+
+/* Show / Hide */
+.hide { display: none; }
+.show { display: block; }
+
+/* Alignment of images + captions */
+.img-right { display: block; margin: .8rem auto 1.6rem; text-align: center; }
+.img-left { display: block; margin: .8rem auto 1.6rem; text-align: center; }
+.img-center { display: block; margin: .8rem auto 1.6rem; text-align: center; }
+.img-right img, .img-left img, .img-center img { display: block; margin: 0 auto .6; }
+.img-right figcaption, .img-left figcaption, .img-center figcaption { display: block; color: Gray; font-style: italic; }
+
+@media only screen and (min-width: $b3) {
+	.img-right { float: right; margin: .8rem 0 1.6rem 4.8rem; }
+	.img-left { float: left; margin: .8rem 4.8rem 1.6rem 0;  }
+}
+
+.img-full,
+.img-full > img {
+	width: 100%;
+}
+
+.full-block {
+	width: 100%;
+	display: block;
+}
+
+/* Unstyled list */
+.list-unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

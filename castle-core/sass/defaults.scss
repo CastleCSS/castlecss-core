@@ -1,0 +1,12 @@
+html {
+	background: $color01;
+	font-size: 62.5%;
+	font-size: $font-size-default;
+	line-height: $line-height-default;
+	color: $color02;
+}
+
+html, button, input, select, textarea {
+	font-family: $font-pri;
+	font-weight: normal;
+}
