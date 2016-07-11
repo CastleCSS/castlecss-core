@@ -1,3 +1,30 @@
+/* Unstyled list */
+.list-unstyled {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* Text alignment */
+.ta-left {
+	text-align: left;
+}
+.ta-center {
+	text-align: center;
+}
+.ta-right {
+	text-align: right;
+}
+
+/* Floating classes */
+.fl { float: left; }
+.fr { float: right; }
+
+/* Border-radius */
+.radius {
+	border-radius: $radius;
+}
+
 /* Floating classes */
 .fl { float: left; }
 .fr { float: right; }
@@ -32,11 +59,4 @@
 .full-block {
 	width: 100%;
 	display: block;
-}
-
-/* Unstyled list */
-.list-unstyled {
-	margin: 0;
-	padding: 0;
-	list-style: none;
 }
