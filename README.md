@@ -12,7 +12,7 @@ Our philosophy is mobile first, self explanatory code code and breakpoints. On t
 ### Breakpoint CSS
 We don't believe in classes like *laptop* or *small* and other classes but we define everything with **b{breakpoint}** this makes everything readable and since we use this throughout the whole framework everything feels familiar when you use it for a while. Whether it's for grid, utility classes, hiding, showing. It all starts with **b{breakpoint}**
 
-## What's included
+## Included files
 CastleCSS Core has the following basic files to kickstart your website:
 
 - main - *include all your other SCSS files*
