@@ -33,8 +33,14 @@ You can install castle css with NPM in your sass folder:
 Type the following to check for updates in your sass folder:
 	
 	npm outdated
+	
 
-Then type the following to npm update
+Nothing? Good! Then you're up to date
+In any other case you'll get something that looks like this:
+Package		Current	Wanted	Latest	Location
+castlecss-core  1.0.0	1.1.0	1.1.0	castlecss-core
+
+So type the following to update:
 
 	npm update
 
