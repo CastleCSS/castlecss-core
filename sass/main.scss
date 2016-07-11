@@ -1,7 +1,11 @@
-@import 'reset';
-@import 'variables';
-@import 'grid';
-@import 'defaults';
-@import 'mixins';
-@import 'utility';
-@import 'utility_spacers';
+/* Base */
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/defaults';
+@import 'base/mixins';
+@import 'base/utility';
+@import 'base/utility_spacers';
+
+/* Layout */
+@import 'layout/grid';
+@import 'layout/static_content';
