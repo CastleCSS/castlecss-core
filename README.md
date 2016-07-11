@@ -15,14 +15,15 @@ We don't believe in classes like *laptop* or *small* and other classes but we de
 ## What's included
 CastleCSS Core has the following basic files to kickstart your website:
 
-- main - *include all your other SCSS files*
-- reset - *set browser defaults to zero/none so nothing weird happends in different browsers*
-- variables - *Variables for the grid, fonts, utility, etc*
-- grid - *Flexbox scss grid with floating fallback*
-- defaults - *Set default web settings*
-- mixins - *Small but handy collection of mixins to use*
-- utility - *Utility classes*
-- utility_spacers - *Utility padding / margin classes*
+
+	main - include all your other SCSS files
+	reset - set browser defaults to zero/none so nothing weird happends in different browsers
+	variables - Variables for the grid, fonts, utility, etc
+	grid - Flexbox scss grid with floating fallback
+	defaults - Set default web settings
+	mixins - Small but handy collection of mixins to use
+	utility - Utility classes
+	utility_spacers - Utility padding / margin classes
 
 ## How to install
 You can install castle css with NPM in your sass folder:
