@@ -44,8 +44,8 @@ If you didn't alter the core files it will now update
 Of course you want to be able to set your own variables and other classes. To do this: make your own custom folder outside of node modules and include the files. The ideal structure of your SASS folder should be the following:
 
 	| Your project
-	| -- sass/ *your own scss goes here*
-	| -- | main.scss *include castlecss main.scss here*
-	| -- | node_modules/
+	| -- sass/ //your custom scss goes here
+	| -- | main.scss //include your own SCSS files and /node_modules/castlecss-core/main.scss here
+	| -- | node_modules/ //CastleCSS files are automatically installed here
 	| -- | -- castlecss-core/
-	| -- | -- | sass *CastleCSS scss files are here*
+	| -- | -- | sass 
