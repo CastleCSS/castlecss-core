@@ -39,15 +39,15 @@ The ideal structure of your SASS folder should be the following:
     |  |  | castlecss-core/
     |  |  |  |
     |  |  |  |-- sass/
-    |  |  |  |  |-- main.scss - *include all your other SCSS files*
+    |  |  |  |  |-- main.scss - include all your other SCSS files
     |  |  |  |
     |  |  |  |-- base/
-    |  |  |  |  |-- reset.scss - <i>set browser defaults to zero/none so nothing weird happends in different browsers</i>
-    |  |  |  |  |-- variables.scss - *Variables for the grid, fonts, utility, etc*
-    |  |  |  |  |-- defaults.scss - *Set default web settings*
-    |  |  |  |  |-- mixins.scss - *Small but handy collection of mixins to use*
-    |  |  |  |  |-- utility.scss - *Utility classes*
-    |  |  |  |  |-- utility_spacers.scss - *Utility padding / margin classes*
+    |  |  |  |  |-- reset.scss - set browser defaults to zero/none so nothing weird happends in different browsers
+    |  |  |  |  |-- variables.scss - Variables for the grid, fonts, utility, etc
+    |  |  |  |  |-- defaults.scss - Set default web settings
+    |  |  |  |  |-- mixins.scss - Small but handy collection of mixins to use
+    |  |  |  |  |-- utility.scss - Utility classes
+    |  |  |  |  |-- utility_spacers.scss - Utility padding / margin classes
     |  |  |  |
     |  |  |  |-- layout/
     |  |  |  |  |--  grid.scss - *Flexbox scss grid with floating fallback*
