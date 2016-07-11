@@ -23,6 +23,8 @@ Mobile first breakpoints (defined in variables.scss)
     b5: 1280px; (desktop large and higher)
     b6: 1600px; (desktop huge and higher)
 
+As your base you can always just use b0, only use b1 if you have a totally different markup <320px
+
 ## Included files and structure
 CastleCSS Core has the following basic files to kickstart your website:
 
