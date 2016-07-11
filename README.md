@@ -12,6 +12,17 @@ Our philosophy is mobile first, self explanatory code code and breakpoints. On t
 ### Breakpoint CSS
 We don't believe in classes like *laptop* or *small* and other classes but we define everything with **b{breakpoint}** this makes everything readable and since we use this throughout the whole framework everything feels familiar when you use it for a while. Whether it's for grid, utility classes, hiding, showing. It all starts with **b{breakpoint}**
 
+#### Mobile first breakpoints (defined in variables.scss)
+	$b0: 0px; (smartwatch and higher)
+	$b1: 320px; (phone portait and higher)
+	$b2: 480px; (phone landscape and higher)
+	$b3: 768px; (tablet portait and higher)
+	$b4: 1024px; (tablet landscape/desktop and higher)
+	$b5: 1280px; (desktop large and higher)
+	$b6: 1600px; (desktop huge and higher)
+	
+Of course you can just add your own breakpoints if you want to.
+
 ## What's included
 CastleCSS Core has the following basic files to kickstart your website:
 
@@ -38,7 +49,7 @@ Type the following to check for updates in your sass folder:
 
 Nothing? Good! Then you're up to date
 
-If you need yo update you'll get something that looks like this:
+If you need to update you'll get something that looks like this:
 
 	Package         Current   Wanted   Latest   Location
 	castlecss-core  1.0.0     1.1.0	   1.1.0    castlecss-core
