@@ -38,7 +38,8 @@ Then type the following to npm update
 
 	npm update
 
-If you didn't alter the core files it will now update
+If you didn't alter the core files it will now update.
+If the updated did succeed you shouldn't get anything back from your terminal if you use *npm outdated* again
 
 # SCSS folder structure and overwriting the CastleCSS defaults
 Of course you want to be able to set your own variables and other classes. To do this: make your own custom folder outside of node modules and include the files. The ideal structure of your SASS folder should be the following:
