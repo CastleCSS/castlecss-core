@@ -1,0 +1,29 @@
+{
+  "name": "castlecss-core",
+  "version": "1.0.0",
+  "description": "CastleCSS a SCSS framework with modular building blocks for the web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CastleCSS/castlecss-core.git"
+  },
+  "keywords": [
+    "castlecss",
+    "castle",
+    "css",
+    "scss",
+    "framework",
+    "building",
+    "blocks",
+    "modular"
+  ],
+  "author": "Darius Rosendahl <darius@denieuwezaak.nl> (https://github.com/CastleCSS)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CastleCSS/castlecss-core/issues"
+  },
+  "homepage": "https://github.com/CastleCSS/castlecss-core#readme"
+}

@@ -1,0 +1,318 @@
+/*
+*	Flexbox grid
+*	Fully Responsive
+*	Based on understandable breakpoint variables
+* 	Doesn't use columns, but proportions
+* 	Fully fluid with fixed-width gutters
+* 	Fully nestable
+*	Will fall back to floating for IE9 and below
+* 	Will not work in IE7 and below.
+*
+*/
+
+$flexbox:	 true;
+$grid-gutter:	 12px;
+$grid-gutter-b1: $grid-gutter;
+$grid-gutter-b2: $grid-gutter;
+$grid-gutter-b3: $grid-gutter;
+$grid-gutter-b4: $grid-gutter;
+$grid-gutter-b5: $grid-gutter;
+
+/*========== Grid basis ==========*/
+
+.g {
+	/* You can turn off flexbox by setting $flex: 0; in the variables; */ 
+	@if $flexbox == true {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	padding: 0; list-style: none;
+	margin-left: -$grid-gutter;
+
+	/* Clearfix for older browsers without flexbox */
+	&:before, &:after { 
+		content:""; display:table;
+	}
+
+	/* Reset grid to floating */
+	&.grid-float {
+		display: block;
+	}
+
+	&.dir-row				{ flex-direction: row; 	  }
+	&.dir-row-reverse 		{ flex-direction: row-reverse; 	  }
+	&.dir-column 			{ flex-direction: column; }
+	&.dir-column-reverse 	{ flex-direction: column-reverse; }
+	
+	/* Grid wrapping */
+	&.wrap 	 { 	flex-wrap: wrap;   }
+	&.nowrap { 	flex-wrap: nowrap; }
+
+	/* ===== Alignment ===== */
+	
+	/* Justify content */
+	&.jc-flex-start 	{	justify-content: flex-start;	}
+	&.jc-flex-end 		{	justify-content: flex-end;		}
+	&.jc-center 		{	justify-content: center;		}
+	&.jc-space-around	{	justify-content: space-around;	}
+	&.jc-space-between	{	justify-content: space-between;	}
+
+	/* Align items */
+	&.ai-flex-start 	{	align-items: flex-start;		}
+	&.ai-flex-end 		{	align-items: flex-end;			}
+	&.ai-center 		{	align-items: center;			}
+	&.ai-space-around	{	align-items: baseline;			}
+	&.ai-stretch		{	align-items: stretch;			}
+
+	/* Align content */
+	&.ac-flex-start 	{	align-content: flex-start;		}
+	&.ac-flex-end 		{	align-content: flex-end;		}
+	&.ac-center 		{	align-content: center;			}
+	&.ac-space-around	{	align-content: space-around;	}
+	&.ac-space-between	{	align-content: space-between; 	}
+
+	/* ===== Grid Items =====
+	* Every direct child within .g is a grid item
+	* Used to be .gi, the new method is less susceptible to errors
+	* Every grid item has the standard gutter spacing from $grid-gutter
+	*/
+		
+	> * {
+		/* Floating as fallback for older browsers */
+		float: left;
+		padding-left: $grid-gutter;
+
+		&.as-flex-start { align-self: flex-start; 	}
+		&.as-flex-end 	{ align-self: flex-end; 	}
+		&.as-stretch 	{ align-self: stretch; 		}
+		&.as-center 	{ align-self: center; 		}
+		&.as-baseline 	{ align-self: baseline; 	}
+		&.as-initial 	{ align-self: initial; 		}
+		&.as-inherit 	{ align-self: inherit; 		}
+	
+		/* Set order per grid item */
+		@for $i from 0 through 12 {
+
+			&.order-#{ $i } {
+				order: #{ $i };
+			}
+		}
+		
+	}
+
+	/* Gutters */
+	&.gutter-none { 
+		margin-left: 0;
+
+		* {
+			padding-left: 0;
+		}
+	}
+
+	/* Smaller gutter */
+	&.gutter-small {
+		margin-left: -$grid-gutter / 2;
+
+		* {
+			padding-left: $grid-gutter / 2;
+		}
+	}
+
+	/* Larger gutter */
+	&.gutter-large {
+		margin-left: -$grid-gutter * 2;
+
+		* {
+			padding-left: $grid-gutter * 2;
+		}
+	}
+
+	/* Let grid items decide their size on their own without setting a width  */
+	&.auto {
+
+		> * {
+			flex: 1 0 auto;
+		}
+	}
+
+
+}
+
+/*========== Grid widths ==========*/
+
+@for $i from 1 through 12 {
+	$width: ($i/12) * 100%;
+
+	@if $i < 10 {
+		.b0_0#{ $i } { width: $width; }
+
+		.b0_push_0#{ $i } { margin-left: $width; }
+	} @else {
+
+		.b0_#{ $i } { width: $width; }
+
+		.b0_push_#{ $i } { margin-left: $width; }
+
+	}
+}
+@for $i from 13 through 24 {
+	$width: ($i/12) * 100%;
+}
+
+.b0_push_none { margin-left: 0; }
+.b0_hide { display: none; }
+.b0_show { display: block; }
+
+/*========== /GRID WIDTHS ==========*/
+
+/*========== BREAKPOINTS ==========*/
+
+// $b1
+@media only screen and (min-width: $b1) {
+
+	@for $i from 1 through 12 {
+		$width: ($i/12) * 100%;
+
+		@if $i < 10 {
+			.b1_0#{ $i } { width: $width; }
+
+			.b1_push_0#{ $i } { margin-left: $width; }
+		} @else {
+
+			.b1_#{ $i } { width: $width; }
+
+			.b1_push_#{ $i } { margin-left: $width; }
+		}
+	}
+	@for $i from 13 through 24 {
+		$width: ($i/12) * 100%;
+	}
+
+	.b1_push_none { margin-left: 0; }
+
+	.b1_hide { display: none; }
+	.b1_show {
+		display: block;
+	}
+}
+
+
+// $b2
+@media only screen and (min-width: $b2) {
+
+	@for $i from 1 through 12 {
+		$width: ($i/12) * 100%;
+
+		@if $i < 10 {
+			.b2_0#{ $i } { width: $width; }
+
+			.b2_push_0#{ $i } { margin-left: $width; }
+		} @else {
+
+			.b2_#{ $i } { width: $width; }
+
+			.b2_push_#{ $i } { margin-left: $width; }
+		}
+		@for $i from 13 through 24 {
+			$width: ($i/12) * 100%;
+		}
+	}
+
+	.b2_push_none { margin-left: 0; }
+
+	.b2_hide { display: none; }
+	.b2_show {
+		display: block;
+	}
+}
+
+// $b3
+@media only screen and (min-width: $b3) {
+
+	@for $i from 1 through 24 {
+		$width: ($i/24) * 100%;
+
+		@if $i < 10 {
+			.b3_0#{ $i } { width: $width; }
+
+			.b3_push_0#{ $i } { margin-left: $width; }
+		} @else {
+			.b3_#{ $i } { width: $width; }
+
+			.b3_push_#{ $i } { margin-left: $width; }
+		}
+		@for $i from 13 through 48 {
+			$width: ($i/24) * 100%;
+		}
+	}
+
+	.b3_x5 { width: 20%; }
+	.b3_x7 { width: 14.28571428571429%; }
+
+	.b3_push_none { margin-left: 0; }
+
+	.b3_hide { display: none; }
+	.b3_show {
+		display: block;
+	}
+}
+
+// $b4
+@media only screen and (min-width: $b4) {
+
+	@for $i from 1 through 24 {
+		$width: ($i/24) * 100%;
+
+		@if $i < 10 {
+			.b4_0#{ $i } { width: $width; }
+
+			.b4_push_0#{ $i } { margin-left: $width; }
+		} @else {
+
+			.b4_#{ $i } { width: $width; }
+
+			.b4_push_#{ $i } { margin-left: $width; }
+		}
+	}
+
+	.b4_x5 { width: 20%; }
+	.b4_x7 { width: 14.28571428571429%; }
+
+	.b4_push_none { margin-left: 0; }
+
+	.b4_hide { display: none; }
+	.b4_show {
+		display: block;
+	}
+
+}
+
+// $b5
+@media only screen and (min-width: $b5) {
+
+	@for $i from 1 through 24 {
+		$width: ($i/24) * 100%;
+
+		@if $i < 10 {
+			.b5_0#{ $i } { width: $width; }
+
+			.b5_push_0#{ $i } { margin-left: $width; }
+		} @else {
+
+			.b5_#{ $i } { width: $width; }
+
+			.b5_push_#{ $i } { margin-left: $width; }
+		}
+	}
+
+	.b5_x5 { width: 20%; }
+	.b5_x7 { width: 14.28571428571429%; }
+
+	.b5_push_none { margin-left: 0; }
+
+	.b5_hide { display: none; }
+	.b5_show {
+		display: block;
+	}
+}
