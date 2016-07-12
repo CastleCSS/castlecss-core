@@ -59,7 +59,7 @@ The ideal structure of your SASS folder should be the following:
 Of course you want to be able to set your own variables and other classes. To do this: make your own custom folder outside of node modules folder and include the files in your main.scss.
 
 ## How to install
-You can install castle css with NPM in your sass folder:
+You can install castle css with [NPM](https://nodejs.org) in your sass folder:
 
     npm i castlecss-core
     
