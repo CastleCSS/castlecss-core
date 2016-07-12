@@ -12,48 +12,73 @@ Our philosophy is mobile first, self explanatory code code and breakpoints. On t
 ### Breakpoint CSS
 We don't believe in classes like *laptop* or *small* and other classes but we define everything with **b{breakpoint}** this makes everything readable and since we use this throughout the whole framework everything feels familiar when you use it for a while. Whether it's for grid, utility classes, hiding, showing. It all starts with **b{breakpoint}**
 
-## Included files
+### Breakpoints
+Mobile first breakpoints (defined in variables.scss)
+
+    b0: 0px; (smartwatch and higher)
+    b1: 320px; (phone portait and higher)
+    b2: 480px; (phone landscape and higher)
+    b3: 768px; (tablet portait and higher)
+    b4: 1024px; (tablet landscape/desktop and higher)
+    b5: 1280px; (desktop large and higher)
+    b6: 1600px; (desktop huge and higher)
+
+As your base you can always just use b0, only use b1 if you have a totally different markup <320px
+
+## Included files and structure
 CastleCSS Core has the following basic files to kickstart your website:
 
-- main - *include all your other SCSS files*
-- reset - *set browser defaults to zero/none so nothing weird happends in different browsers*
-- variables - *Variables for the grid, fonts, utility, etc*
-- grid - *Flexbox scss grid with floating fallback*
-- defaults - *Set default web settings*
-- mixins - *Small but handy collection of mixins to use*
-- utility - *Utility classes*
-- utility_spacers - *Utility padding / margin classes*
+### SCSS folder structure and overwriting the CastleCSS defaults
+The ideal structure of your SASS folder should be the following:
+
+    | Your project/
+    |-- sass/ 
+    |  |-- Custom project specific files here
+    |  |-- Main.scss //include castlecss main.scss files here first, your project specific files after that
+    |  |
+    |  |-- node_modules/ //CastleCSS files are automatically installed here
+    |  |  |
+    |  |  | castlecss-core/
+    |  |  |  |
+    |  |  |  |-- sass/
+    |  |  |  |  |-- main.scss - include all your other SCSS files
+    |  |  |  |
+    |  |  |  |-- base/
+    |  |  |  |  |-- reset.scss - set browser defaults to zero/none so nothing weird happends in different browsers
+    |  |  |  |  |-- variables.scss - Variables for the grid, fonts, utility, etc
+    |  |  |  |  |-- defaults.scss - Set default web settings
+    |  |  |  |  |-- mixins.scss - Small but handy collection of mixins to use
+    |  |  |  |  |-- utility.scss - Utility classes
+    |  |  |  |  |-- utility_spacers.scss - Utility padding / margin classes
+    |  |  |  |
+    |  |  |  |-- layout/
+    |  |  |  |  |--  grid.scss - *Flexbox scss grid with floating fallback*
+    |  |  |  |  |--  static_files.scss - *Static files like containers*
+
+### Overwrite CastleCSS
+Of course you want to be able to set your own variables and other classes. To do this: make your own custom folder outside of node modules folder and include the files in your main.scss.
 
 ## How to install
-You can install castle css with NPM in your sass folder:
+You can install castle css with [NPM](https://nodejs.org) in your sass folder:
 
-	npm i castlecss-core
-	
+    npm i castlecss-core
+    
 ### How to update
 Type the following to check for updates in your sass folder:
-	
-	npm outdated
-	
+    
+    npm outdated
+    
 
 Nothing? Good! Then you're up to date
 In any other case you'll get something that looks like this:
 
-	Package         Current   Wanted   Latest   Location
-	castlecss-core  1.0.0     1.1.0	   1.1.0    castlecss-core
+    Package         Current   Wanted   Latest   Location
+    castlecss-core  1.0.0     1.1.0    1.1.0    castlecss-core
 
 So type the following to update:
 
-	npm update
+    npm update
 
 If you didn't alter the core files it will now update.
 If the updated did succeed you shouldn't get anything back from your terminal if you use *npm outdated* again
 
-# SCSS folder structure and overwriting the CastleCSS defaults
-Of course you want to be able to set your own variables and other classes. To do this: make your own custom folder outside of node modules and include the files. The ideal structure of your SASS folder should be the following:
-
-	| Your project
-	| -- sass/ //your custom scss goes here
-	| -- | main.scss //include your own SCSS files and /node_modules/castlecss-core/main.scss here
-	| -- | node_modules/ //CastleCSS files are automatically installed here
-	| -- | -- castlecss-core/
-	| -- | -- | sass 
