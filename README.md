@@ -4,7 +4,7 @@
 CastleCSS a mobile first SCSS framework with modular building blocks for the web
 
 ## What is different between CastleCSS and other frameworks?
-Unlike other Frameworks we don't include *everything*, you don't need everthing :): but only what you need. 
+Unlike other Frameworks we don't include *everything*,  but only what you need. You don't need and want everything :):. 
 You pick what you want to use. The core is a way to kickstart your website with the basic files and philosophy we believe in.
 
 Our philosophy is mobile first, self explanatory code code and breakpoints. On the other hand we want to be able to keep you up to date with the latest version of CastleCSS, this is possible if you overwrite the defaults the way you're supposed to.
