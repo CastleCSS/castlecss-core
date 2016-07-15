@@ -1,11 +1,20 @@
-/*========== VARIABLES ==========*/
+/* 	Variables 
+*	Add or replace variables in your OWN variables file
+*/
 
 /* 
-* Base colors 
-* Color 01 and 02 reservered for white and black 
+* 	Base colors 
+* 	Color 01 and 02 reservered for white and black 
 */
 $color01:  	#fff;
 $color02:  	#000;
+
+/*	Theme colors */
+$theme01: 	#1B94BF;	// Knight blue
+$theme02: 	#093142; 	// Royal blue
+$theme03:	#12637F;	// Falcon blue
+$theme04:	#FFC200;	// Royal yellow
+$theme05:	#FFFFFF;	// Destroyer white
 
 $alert:		#FFD700;
 $negative:	#FF7878;
