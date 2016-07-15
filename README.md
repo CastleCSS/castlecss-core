@@ -1,4 +1,5 @@
 # CastleCSS Core Files
+![CastleCSS logo @CastleCss.com](https://www.doordarius.nl/castlecss-logo-250.png)
 
 ## What is CastleCSS?
 CastleCSS a mobile first SCSS framework with modular building blocks for the web
