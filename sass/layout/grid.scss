@@ -1,13 +1,12 @@
 /*
-*	Flexbox grid
-*	Fully Responsive
-*	Based on understandable breakpoint variables
-* 	Doesn't use columns, but proportions
-* 	Fully fluid with fixed-width gutters
-* 	Fully nestable
-*	Will fall back to floating for IE9 and below
-* 	Will not work in IE7 and below.
-*
+	Flexbox grid
+	Fully Responsive
+	Based on understandable breakpoint variables
+	Doesn't use columns, but proportions
+	Fully fluid with fixed-width gutters
+	Fully nestable
+	Will fall back to floating for IE9 and below
+	Will not work in IE7 and below.
 */
 
 $flexbox:	 true;
@@ -18,7 +17,7 @@ $grid-gutter-b3: $grid-gutter;
 $grid-gutter-b4: $grid-gutter;
 $grid-gutter-b5: $grid-gutter;
 
-/*========== Grid basis ==========*/
+/* Grid basis */
 
 .g {
 	/* You can turn off flexbox by setting $flex: 0; in the variables; */ 
@@ -49,8 +48,8 @@ $grid-gutter-b5: $grid-gutter;
 	&.wrap 	 { 	flex-wrap: wrap;   }
 	&.nowrap { 	flex-wrap: nowrap; }
 
-	/* ===== Alignment ===== */
-	
+	/* Alignment */	
+
 	/* Justify content */
 	&.jc-flex-start 	{	justify-content: flex-start;	}
 	&.jc-flex-end 		{	justify-content: flex-end;		}
@@ -72,10 +71,10 @@ $grid-gutter-b5: $grid-gutter;
 	&.ac-space-around	{	align-content: space-around;	}
 	&.ac-space-between	{	align-content: space-between; 	}
 
-	/* ===== Grid Items =====
-	* Every direct child within .g is a grid item
-	* Used to be .gi, the new method is less susceptible to errors
-	* Every grid item has the standard gutter spacing from $grid-gutter
+	/*	Grid items
+		Every direct child within .g is a grid item
+		Used to be .gi, the new method is less susceptible to errors
+		Every grid item has the standard gutter spacing from $grid-gutter
 	*/
 		
 	> * {
@@ -139,7 +138,7 @@ $grid-gutter-b5: $grid-gutter;
 
 }
 
-/*========== Grid widths ==========*/
+/* Grid widths */
 
 @for $i from 1 through 12 {
 	$width: ($i/12) * 100%;
@@ -164,9 +163,6 @@ $grid-gutter-b5: $grid-gutter;
 .b0_hide { display: none; }
 .b0_show { display: block; }
 
-/*========== /GRID WIDTHS ==========*/
-
-/*========== BREAKPOINTS ==========*/
 
 // $b1
 @media only screen and (min-width: $b1) {
@@ -303,6 +299,34 @@ $grid-gutter-b5: $grid-gutter;
 			.b5_#{ $i } { width: $width; }
 
 			.b5_push_#{ $i } { margin-left: $width; }
+		}
+	}
+
+	.b5_x5 { width: 20%; }
+	.b5_x7 { width: 14.28571428571429%; }
+
+	.b5_push_none { margin-left: 0; }
+
+	.b5_hide { display: none; }
+	.b5_show {
+		display: block;
+	}
+}
+// $b6
+@media only screen and (min-width: $b6) {
+
+	@for $i from 1 through 24 {
+		$width: ($i/24) * 100%;
+
+		@if $i < 10 {
+			.b6_0#{ $i } { width: $width; }
+
+			.b6_push_0#{ $i } { margin-left: $width; }
+		} @else {
+
+			.b6_#{ $i } { width: $width; }
+
+			.b6_push_#{ $i } { margin-left: $width; }
 		}
 	}
 
