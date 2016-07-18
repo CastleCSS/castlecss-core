@@ -1,9 +1,3 @@
-/* 
-	Default site settings
-	Setting the font-size to 62.5% so we can easily calculate with REM 
-	1REM = 10px (relative pixels)
-*/
-
 html {
 	background: $color01;
 	font-size: 62.5%;
@@ -13,24 +7,9 @@ html {
 body {
 	font-size: $font-size-default;
 	line-height: $line-height-default;
-}
+}	
 
 html, button, input, select, textarea {
 	font-family: $font-pri;
 	font-weight: normal;
-}
-
-/* Max width of images 100% */
-img, embed, object { 
-	max-width: 100%;
-}
-
-/* Default Links */
-a { 
-	text-decoration: underline; 
-	color: $theme01;
-}
-a:hover { 
-	color: $theme03;
-	text-decoration: none;
 }

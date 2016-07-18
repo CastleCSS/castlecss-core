@@ -1,15 +1,15 @@
 /*========== MIXINS ==========*/
 
 /* 
-  Text-overflow: ellipsis
+* Text-overflow: ellipsis
 */
 @mixin ellipsis(){
   overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
 }
 
 /*
-  Ul-reset
-  Set margin, padding and list-style to zero/none
+* Ul-reset
+* Set margin, padding and list-style to zero/none
 */
 @mixin ulreset() {
   margin: 0; padding: 0; list-style: none;
@@ -38,7 +38,7 @@
 * Generic transform
 */
 @mixin transform($transforms) {
-	transform: $transforms;
+    transform: $transforms;
 }
 /*
 * Rotate
@@ -51,7 +51,7 @@
 * Scale
 */
 @mixin scale($scale) {
-	 @include transform(scale($scale));
+     @include transform(scale($scale));
 }
 
 /*
@@ -65,14 +65,14 @@
 * translateX
 */
 @mixin translateX ($x) {
-	@include transform(translateX($x));
+    @include transform(translateX($x));
 }
 
 /* 
 * translateY
 */
 @mixin translateY ($y) {
-	@include transform(translateY($y));
+    @include transform(translateY($y));
 }
 
 /* 
