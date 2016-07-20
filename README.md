@@ -2,7 +2,7 @@
 ![CastleCSS logo @CastleCss.com](https://www.doordarius.nl/castlecss-logo-250.png)
 
 ## What is CastleCSS?
-CastleCSS a mobile first SCSS framework with modular building blocks for the web
+CastleCSS a mobile first SCSS framework with modular building blocks for the web. It's also fully **updateable**! Now longer worrying if your base files are still correct. We do this for you ;)
 
 ## What is different between CastleCSS and other frameworks?
 Unlike other Frameworks we don't include *everything*,  but only what you need. You don't need and want everything :):. 
@@ -11,20 +11,24 @@ You pick what you want to use. The core is a way to kickstart your website with 
 Our philosophy is mobile first, self explanatory code code and breakpoints. On the other hand we want to be able to keep you up to date with the latest version of CastleCSS, this is possible if you overwrite the defaults the way you're supposed to.
 
 ### Breakpoint CSS
-We don't believe in classes like *laptop* or *small* and other classes but we define everything with **b{breakpoint}** this makes everything readable and since we use this throughout the whole framework everything feels familiar when you use it for a while. Whether it's for grid, utility classes, hiding, showing. It all starts with **b{breakpoint}**
+We don't believe in classes like *laptop* or *small* and other device-classes that change throughout time but we define everything with **b{breakpoint}** this makes everything readable and since we use this throughout the whole framework everything feels familiar when you use it for a while. Whether it's for grid, utility classes, hiding, showing. It all starts with **b{breakpoint}**
+
+You can overwrite these breakpoins in your own variable file.
 
 ### Breakpoints
 Mobile first breakpoints (defined in variables.scss)
 
-    b0: 0px; (smartwatch and higher)
-    b1: 320px; (phone portait and higher)
-    b2: 480px; (phone landscape and higher)
-    b3: 768px; (tablet portait and higher)
-    b4: 1024px; (tablet landscape/desktop and higher)
-    b5: 1280px; (desktop large and higher)
-    b6: 1600px; (desktop huge and higher)
+    .b0: 0px; (smartwatch and higher)
+    .b1: 320px; (phone portait and higher)
+    .b2: 480px; (phone landscape and higher)
+    .b3: 768px; (tablet portait and higher)
+    .b4: 1024px; (tablet landscape/desktop and higher)
+    .b5: 1280px; (desktop large and higher)
+    .b6: 1600px; (desktop huge and higher)
 
 As your base you can always just use b0, only use b1 if you have a totally different markup <320px
+
+
 
 ## Included files and structure
 CastleCSS Core has the following basic files to kickstart your website:
