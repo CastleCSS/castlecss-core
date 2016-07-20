@@ -9,20 +9,11 @@
 	Will not work in IE7 and below.
 */
 
-$flexbox:	 true;
-$grid-gutter:	 12px;
-$grid-gutter-b1: 12px;
-$grid-gutter-b2: 12px;
-$grid-gutter-b3: 12px;
-$grid-gutter-b4: 12px;
-$grid-gutter-b5: 12px;
-$grid-gutter-b6: 12px;
-
 /* Grid basis */
 
 .g {
-	/* You can turn off flexbox by setting $flex: 0; in the variables; */ 
-	@if $flexbox == true {
+	/* You can turn off flexbox by setting $flexbox-grid: 0; in the variables; */ 
+	@if $flexbox-grid == true {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
