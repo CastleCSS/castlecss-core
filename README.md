@@ -60,6 +60,16 @@ The ideal structure of your SASS folder should be the following:
     |  |  |  |  |--  grid.scss - *Flexbox scss grid with floating fallback*
     |  |  |  |  |--  static_files.scss - *Static files like containers*
 
+### Main.scss
+You should make your own main.scss which includes castlecss. Your main.scss could/should look similar to this if you want to use your own variables:
+
+```
+    @import 'node_modules/castlecss-core/sass/variables'; core variables
+    @import 'base/variables';  // own variables
+    @import '/node_modules/castlecss-core/sass/main'; //rest of core files
+    // now import the rest of your scss files
+```
+
 ### Overwrite CastleCSS
 Of course you want to be able to set your own variables and other classes. To do this: make your own custom folder outside of node modules folder and include the files in your main.scss.
 
