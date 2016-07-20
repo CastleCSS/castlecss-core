@@ -8,20 +8,32 @@
 .container {
 	position: relative;
 	margin: 0 auto;
+	width: $container;
+	max-width: 100%;
+}
+
+@media only screen and (min-width: $b1) {
+	.container {
+		width: $container-b1;
+	}
+}
+@media only screen and (min-width: $b2) {
+	.container {
+		width: $container-b2;
+	}
 }
 
 @media only screen and (min-width: $b3) {
 
 	.container {
-		width: $b3-container;
-		max-width: 100%;
+		width: $container-b3;
 	}
 }
 
 @media only screen and (min-width: $b4) {
 	
 	.container {
-		width: $b4-container;
+		width: $container-b4;
 	}
 
 }
@@ -29,6 +41,6 @@
 @media only screen and (min-width: $b5) {
 
 	.container {
-		width: $b5-container;
+		width: $container-b5;
 	}
 }
