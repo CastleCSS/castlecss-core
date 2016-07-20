@@ -5,30 +5,111 @@
 	list-style: none;
 }
 
-/* Text alignment */
-.ta-left {
-	text-align: left;
+/* Text alignment per breakpoint */
+.ta-left	{ text-align: left;   }
+.ta-right	{ text-align: right;  }
+.ta-center	{ text-align: center; }
+
+@media only screen and (min-width: $b1) {
+	.ta-left-b1 	{ text-align: left;		}
+	.ta-right-b1 	{ text-align: right;	}
+	.ta-center-b1 	{ text-align: center;	}
 }
-.ta-center {
-	text-align: center;
+@media only screen and (min-width: $b2) {
+	.ta-left-b2 	{ text-align: left;		}
+	.ta-right-b2 	{ text-align: right;	}
+	.ta-center-b2 	{ text-align: center;	}
 }
-.ta-right {
-	text-align: right;
+@media only screen and (min-width: $b3) {
+
+	.ta-left-b3 	{ text-align: left;		}
+	.ta-right-b3 	{ text-align: right;	}
+	.ta-center-b3 	{ text-align: center;	}
+}
+@media only screen and (min-width: $b4) {
+	.ta-left-b4 	{ text-align: left;		}
+	.ta-right-b4 	{ text-align: right; 	}
+	.ta-center-b4 	{ text-align: center;	}
+}
+@media only screen and (min-width: $b5) {
+	.ta-left-b5 	{ text-align: left; 	}
+	.ta-right-b5 	{ text-align: right; 	}
+	.ta-center-b5 	{ text-align: center; }
+}
+@media only screen and (min-width: $b6) {
+	.ta-left-b6 	{ text-align: left;		}
+	.ta-right-b6 	{ text-align: right; 	}
+	.ta-center-b6 	{ text-align: center;	}
 }
 
-/* Floating classes */
+/* Floating and clearing classes per breakpoint */
 .fl { float: left; }
-.fr { float: right; }
+.fr { float: right;}
+.fn { float: none; }
+.cl { clear: left; }
+.cr { clear: right;}
+.cb { clear: both; }
+.cn { clear: none; }
+
+@media only screen and (min-width: $b1) {
+	.fl-b1 { float: left; }
+	.fr-b1 { float: right; }
+	.fn-b1 { float: none; }
+	.cl-b1 { clear: left; }
+	.cr-b1 { clear: right;}
+	.cb-b1 { clear: both; }
+	.cn-b1 { clear: none; }
+}
+@media only screen and (min-width: $b2) {
+	.fl-b2 { float: left; }
+	.fr-b2 { float: right; }
+	.fn-b2 { float: none; }
+	.cl-b2 { clear: left; }
+	.cr-b2 { clear: right;}
+	.cb-b2 { clear: both; }
+	.cn-b2 { clear: none; }
+}
+@media only screen and (min-width: $b3) {
+	.fl-b3 { float: left; }
+	.fr-b3 { float: right; }
+	.fn-b3 { float: none; }
+	.cl-b3 { clear: left; }
+	.cr-b3 { clear: right;}
+	.cb-b3 { clear: both; }
+	.cn-b3 { clear: none; }
+}
+@media only screen and (min-width: $b4) {
+	.fl-b4 { float: left; }
+	.fr-b4 { float: right; }
+	.fn-b4 { float: none; }
+	.cl-b4 { clear: left; }
+	.cr-b4 { clear: right;}
+	.cb-b4 { clear: both; }
+	.cn-b4 { clear: none; }
+}
+@media only screen and (min-width: $b5) {
+	.fl-b5 { float: left; }
+	.fr-b5 { float: right; }
+	.fn-b5 { float: none; }
+	.cl-b5 { clear: left; }
+	.cr-b5 { clear: right;}
+	.cb-b5 { clear: both; }
+	.cn-b5 { clear: none; }
+}
+@media only screen and (min-width: $b6) {
+	.fl-b6 { float: left; }
+	.fr-b6 { float: right; }
+	.fn-b6 { float: none; }
+	.cl-b6 { clear: left; }
+	.cr-b6 { clear: right;}
+	.cb-b6 { clear: both; }
+	.cn-b6 { clear: none; }
+}
 
 /* Border-radius */
 .radius {
 	border-radius: $radius;
 }
-
-/* Floating classes */
-.fl { float: left; }
-.fr { float: right; }
-.fn { float: none; }
 
 /* Clearfix */
 .cf:before, .cf:after, ul.fields > li:before, ul.fields > li:after {content:"";display:table;}
