@@ -4,6 +4,9 @@
 	1REM = 10px (relative pixels)
 */
 
+/* body and wrapper on width: 100% and min-height: 100%; */
+body, .wrapper { width: 100%;  min-height: 100%; }
+
 html {
 	background: $color01;
 	font-size: 62.5%;
@@ -20,12 +23,20 @@ html, button, input, select, textarea {
 	font-weight: normal;
 }
 
+.wrapper {
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+}
+
 /* Max width of images 100% */
 img, embed, object { 
 	max-width: 100%;
 }
 
 /* Default Links */
+
 a { 
 	text-decoration: underline; 
 	color: $theme01;
@@ -34,10 +45,15 @@ a:hover {
 	color: $theme03;
 	text-decoration: none;
 }
-
+a[href^="tel"], a[href^="sms"], a[href^="fax"] { 
+	text-decoration: none; color: inherit; 
+}
 /* 	Default lists and tables have margin-bottom: $margin-default * 2; */
 dl, ol, ul, p, pre, table { 
 	margin-bottom: $margin-default * 2; 
+}
+dd {
+	margin-bottom: $margin-default;
 }
 /* 	OL and UL alignment */
 ol, ul { 
