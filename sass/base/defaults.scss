@@ -34,3 +34,14 @@ a:hover {
 	color: $theme03;
 	text-decoration: none;
 }
+
+/* 	Default lists and tables have margin-bottom: $margin-default * 2; */
+dl, ol, ul, p, pre, table { 
+	margin-bottom: $margin-default * 2; 
+}
+/* 	OL and UL alignment */
+ol, ul { 
+	padding-left: 24px;
+}
+/* 	Standard UL list-style is disc */
+ul { list-style-type: disc; }
