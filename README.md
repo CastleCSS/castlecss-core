@@ -11,7 +11,7 @@ The core files are part of the [Full CastleCSS Package](https://github.com/Castl
 - Download or clone the package
 
 ## Updating files
-CastleCSS is built so it's easy to update, you can just download make it your own as long as you don't update the core files. Overwrite 
+CastleCSS is built so it's easy to update, you can just download make it your own as long as you don't ovewrite the core files. 
 
 ```npm update castlecss-core```
 
