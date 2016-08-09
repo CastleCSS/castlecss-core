@@ -15,34 +15,27 @@ CastleCSS is built so it's easy to update, you can just download make it your ow
 
 ```npm update castlecss-core```
 
+## Documentation
+We're currently writing the documentation. Hang on tight!
+
 ## Setup
-Your project should have a setup similair to this (included in the [Full CastleCSS Package](https://github.com/CastleCSS/castlecss).):
+Your project should have a setup similair to this (included in the [Full CastleCSS Package](https://github.com/CastleCSS/castlecss)):
 With this you make sure your own variables overwrite the castle-core variables and your setup is still updatable.
 
-
-    | Your project/
-    |-- sass/ 
-    |  |-- Custom project specific files here
-    |  |-- Main.scss //include castlecss main.scss files here first, your project specific files after that
-    |  |
-    |  |-- node_modules/ //CastleCSS files are automatically installed here
-    |  |  |
-    |  |  | castlecss-core/
-    |  |  |  |
-    |  |  |  |-- sass/
-    |  |  |  |  |-- main.scss - include all your other SCSS files
-    |  |  |  |
-    |  |  |  |-- base/
-    |  |  |  |  |-- reset.scss - set browser defaults to zero/none so nothing weird happends in different browsers
-    |  |  |  |  |-- variables.scss - Variables for the grid, fonts, utility, etc
-    |  |  |  |  |-- defaults.scss - Set default web settings
-    |  |  |  |  |-- mixins.scss - Small but handy collection of mixins to use
-    |  |  |  |  |-- utility.scss - Utility classes
-    |  |  |  |  |-- utility_spacers.scss - Utility padding / margin classes
-    |  |  |  |
-    |  |  |  |-- layout/
-    |  |  |  |  |--  grid.scss - *Flexbox scss grid with floating fallback*
-    |  |  |  |  |--  static_files.scss - *Static files like containers*
+```
+| Your project/
+|
+|-- scss/ 
+| |-- /* Custom project specific scss files here */
+| |-- Main.scss
+| |
+|-- node_modules/
+| | 
+| | /*	CastleCSS files included automatically here */
+| | castlecss-core/
+| | castlecss-buttons/
+| | castlecss-etc ;)/
+```
 
 ### Main.scss
 Your main.scss should have a setup similair to this (included in the [Full CastleCSS Package](https://github.com/CastleCSS/castlecss)):
