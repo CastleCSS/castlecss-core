@@ -183,6 +183,14 @@
 
 		> * {
 			padding-left: $grid-gutter-b1;
+
+			/* Set order per grid item */
+			@for $i from 0 through 12 {
+
+				&.order-b1-#{ $i } {
+					order: #{ $i };
+				}
+			}
 		}
 	}
 
@@ -221,6 +229,14 @@
 		
 		> * {
 			padding-left: $grid-gutter-b2;
+
+			/* Set order per grid item */
+			@for $i from 0 through 12 {
+
+				&.order-b2-#{ $i } {
+					order: #{ $i };
+				}
+			}
 		}
 	}
 
@@ -257,6 +273,14 @@
 		
 		> * {
 			padding-left: $grid-gutter-b3;
+
+			/* Set order per grid item */
+			@for $i from 0 through 24 {
+
+				&.order-b3-#{ $i } {
+					order: #{ $i };
+				}
+			}
 		}
 	}
 
@@ -294,6 +318,14 @@
 		
 		> * {
 			padding-left: $grid-gutter-b4;
+
+			/* Set order per grid item */
+			@for $i from 0 through 24 {
+
+				&.order-b4-#{ $i } {
+					order: #{ $i };
+				}
+			}
 		}
 	}
 
@@ -332,6 +364,14 @@
 		
 		> * {
 			padding-left: $grid-gutter-b5;
+
+			/* Set order per grid item */
+			@for $i from 0 through 12 {
+
+				&.order-b5-#{ $i } {
+					order: #{ $i };
+				}
+			}
 		}
 	}
 
@@ -368,6 +408,14 @@
 		
 		> * {
 			padding-left: $grid-gutter-b6;
+
+			/* Set order per grid item */
+			@for $i from 0 through 24 {
+
+				&.order-b6-#{ $i } {
+					order: #{ $i };
+				}
+			}
 		}
 	}
 
