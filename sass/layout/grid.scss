@@ -68,7 +68,7 @@
 		Used to be .gi, the new method is less susceptible to errors
 		Every grid item has the standard gutter spacing from $grid-gutter
 	*/
-		
+
 	> * {
 		/* Floating as fallback for older browsers */
 		float: left;
@@ -81,12 +81,18 @@
 		&.as-baseline 	{ align-self: baseline; 	}
 		&.as-initial 	{ align-self: initial; 		}
 		&.as-inherit 	{ align-self: inherit; 		}
-	
+
 		/* Set order per grid item */
 		@for $i from 0 through 12 {
 
-			&.order-#{ $i } {
-				order: #{ $i };
+			@if $i < 10 {
+				&.order-0#{ $i } {
+					order: #{ $i };
+				}
+			} @else {
+				&.order-#{ $i } {
+					order: #{ $i };
+				}
 			}
 		}
 		
@@ -185,10 +191,16 @@
 			padding-left: $grid-gutter-b1;
 
 			/* Set order per grid item */
-			@for $i from 0 through 12 {
+			@for $i from 0 through 24 {
 
-				&.order-b1-#{ $i } {
-					order: #{ $i };
+				@if $i < 10 {
+					&.order-b1-0#{ $i } {
+						order: #{ $i };
+					}
+				} @else {
+					&.order-b1-#{ $i } {
+						order: #{ $i };
+					}
 				}
 			}
 		}
@@ -231,10 +243,16 @@
 			padding-left: $grid-gutter-b2;
 
 			/* Set order per grid item */
-			@for $i from 0 through 12 {
+			@for $i from 0 through 24 {
 
-				&.order-b2-#{ $i } {
-					order: #{ $i };
+				@if $i < 10 {
+					&.order-b2-0#{ $i } {
+						order: #{ $i };
+					}
+				} @else {
+					&.order-b2-#{ $i } {
+						order: #{ $i };
+					}
 				}
 			}
 		}
@@ -277,8 +295,14 @@
 			/* Set order per grid item */
 			@for $i from 0 through 24 {
 
-				&.order-b3-#{ $i } {
-					order: #{ $i };
+				@if $i < 10 {
+					&.order-b3-0#{ $i } {
+						order: #{ $i };
+					}
+				} @else {
+					&.order-b3-#{ $i } {
+						order: #{ $i };
+					}
 				}
 			}
 		}
@@ -322,8 +346,14 @@
 			/* Set order per grid item */
 			@for $i from 0 through 24 {
 
-				&.order-b4-#{ $i } {
-					order: #{ $i };
+				@if $i < 10 {
+					&.order-b4-0#{ $i } {
+						order: #{ $i };
+					}
+				} @else {
+					&.order-b4-#{ $i } {
+						order: #{ $i };
+					}
 				}
 			}
 		}
@@ -366,10 +396,16 @@
 			padding-left: $grid-gutter-b5;
 
 			/* Set order per grid item */
-			@for $i from 0 through 12 {
+			@for $i from 0 through 24 {
 
-				&.order-b5-#{ $i } {
-					order: #{ $i };
+				@if $i < 10 {
+					&.order-b5-0#{ $i } {
+						order: #{ $i };
+					}
+				} @else {
+					&.order-b5-#{ $i } {
+						order: #{ $i };
+					}
 				}
 			}
 		}
@@ -412,8 +448,14 @@
 			/* Set order per grid item */
 			@for $i from 0 through 24 {
 
-				&.order-b6-#{ $i } {
-					order: #{ $i };
+				@if $i < 10 {
+					&.order-b6-0#{ $i } {
+						order: #{ $i };
+					}
+				} @else {
+					&.order-b6-#{ $i } {
+						order: #{ $i };
+					}
 				}
 			}
 		}
