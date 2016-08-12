@@ -1,6 +1,6 @@
 {
   "name": "castlecss-core",
-  "version": "1.8.0-2",
+  "version": "1.8.0-3",
   "description": "CastleCSS a SCSS framework with modular building blocks for the web",
   "main": "index.js",
   "scripts": {
@@ -20,10 +20,9 @@
     "blocks",
     "modular"
   ],
-  "author": "Darius Rosendahl <darius@denieuwezaak.nl> (https://github.com/CastleCSS)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CastleCSS/castlecss-core/issues"
   },
-  "homepage": "https://github.com/CastleCSS/castlecss-core#readme"
+  "homepage": "http://www.castlecss.com"
 }

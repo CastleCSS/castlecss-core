@@ -5,6 +5,8 @@
 	list-style: none;
 }
 
+
+
 /* Text alignment per breakpoint */
 .ta-left	{ text-align: left;   }
 .ta-right	{ text-align: right;  }
@@ -104,6 +106,122 @@
 	.cr-b6 { clear: right;}
 	.cb-b6 { clear: both; }
 	.cn-b6 { clear: none; }
+}
+
+/* Hide / show elements per breakpoint */
+.b0-hide { display: none; }
+.b0-show { display: block; }
+
+/* Set order per grid item */
+&.order-0 {
+	order: 0;
+}
+@for $i from 1 through 12 {
+	&.order-#{ $i } {
+		order: #{ $i };
+	}
+}
+
+@media only screen and (min-width: $b1) {
+	
+	/* Hide / show elements per breakpoint */
+	.b1-hide { display: none; }
+	.b1-show { display: block; }
+
+	/* Set order per grid item */
+	.order-b1-0 {
+		order: 0;
+	}
+	@for $i from 1 through 12 {
+		.order-b1-#{ $i } {
+			order: #{ $i };
+		}
+	}
+
+}
+@media only screen and (min-width: $b2) {
+
+	/* Hide / show elements per breakpoint */
+	.b2-hide { display: none; }
+	.b2-show { display: block; }
+
+	/* Set order per grid item */
+	.order-b2-0 {
+		order: 0;
+	}
+	@for $i from 1 through 12 {
+		.order-b2-#{ $i } {
+			order: #{ $i };
+		}
+	}
+
+}
+@media only screen and (min-width: $b3) {
+
+	/* Hide / show elements per breakpoint */
+	.b3-hide { display: none; }
+	.b3-show { display: block; }
+
+	/* Set order per grid item */
+	.order-b3-0 {
+		order: 0;
+	}
+	@for $i from 1 through 24 {
+		.order-b3-#{ $i } {
+			order: #{ $i };
+		}
+	}
+
+}
+@media only screen and (min-width: $b4) {
+
+	/* Hide / show elements per breakpoint */
+	.b4-hide { display: none; }
+	.b4-show { display: block; }
+
+	/* Set order per grid item */
+	.order-b4-0 {
+		order: 0;
+	}
+	@for $i from 1 through 24 {
+		.order-b4-#{ $i } {
+			order: #{ $i };
+		}
+	}
+
+}
+@media only screen and (min-width: $b5) {
+
+	/* Hide / show elements per breakpoint */
+	.b5-hide { display: none; }
+	.b5-show { display: block; }
+
+	/* Set order per grid item */
+	.order-b5-0 {
+		order: 0;
+	}
+	@for $i from 1 through 24 {
+		.order-b5-#{ $i } {
+			order: #{ $i };
+		}
+	}
+
+}
+@media only screen and (min-width: $b6) {
+
+	/* Hide / show elements per breakpoint */
+	.b6-hide { display: none; }
+	.b6-show { display: block; }
+
+	/* Set order per grid item */
+	.order-b6-0 {
+		order: 0;
+	}
+	@for $i from 1 through 24 {
+		.order-b6-#{ $i } {
+			order: #{ $i };
+		}
+	}
 }
 
 /* Border-radius */
