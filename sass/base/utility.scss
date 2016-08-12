@@ -1,11 +1,61 @@
+/* Breakpoints */
+$breakpoint-map: (
+	1: $b1,
+	2: $b2,
+	3: $b3,
+	4: $b4,
+	5: $b5,
+	6: $b6,
+);
+$amount-breakpoints: length($breakpoint-map);
+
+
+/* Set order per breakpoint */
+@for $i from 0 through 12 {
+	&.order-#{ $i } {
+		order: #{ $i };
+	}
+}
+
+/* Hide / show elements per breakpoint */
+.hide { display: none; }
+.show { display: block; }
+
+@for $b from 0 through $amount-breakpoints {
+	$breakpoint : map-get($breakpoint-map, $b);
+	
+	@media only screen and (min-width: $breakpoint) {
+	
+		/* Hide / show elements per breakpoint */
+		.hide-b#{$b} { display: none; }
+		.show-b#{$b} { display: block; }
+
+		@if $b > 0 {
+			/* Set order per breakpoint */
+			@for $i from 0 through 12 {
+				&.order-b#{$b}-#{$i} {
+					order: #{$i};
+				}
+			}
+		}
+		@if $b > 3 {
+			/* Set order per breakpoint */
+			@for $i from 13 through 24 {
+				&.order-b#{$b}-#{ $i } {
+					order: #{ $i };
+				}
+			}
+		}
+
+	}
+}
+
 /* Unstyled list */
 .list-unstyled {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-
-
 
 /* Text alignment per breakpoint */
 .ta-left	{ text-align: left;   }
@@ -106,122 +156,6 @@
 	.cr-b6 { clear: right;}
 	.cb-b6 { clear: both; }
 	.cn-b6 { clear: none; }
-}
-
-/* Hide / show elements per breakpoint */
-.hide-b0 { display: none; }
-.show-b0 { display: block; }
-
-/* Set order per grid item */
-&.order-0 {
-	order: 0;
-}
-@for $i from 1 through 12 {
-	&.order-#{ $i } {
-		order: #{ $i };
-	}
-}
-
-@media only screen and (min-width: $b1) {
-	
-	/* Hide / show elements per breakpoint */
-	.hide-b1 { display: none; }
-	.show-b1 { display: block; }
-
-	/* Set order per grid item */
-	.order-b1-0 {
-		order: 0;
-	}
-	@for $i from 1 through 12 {
-		.order-b1-#{ $i } {
-			order: #{ $i };
-		}
-	}
-
-}
-@media only screen and (min-width: $b2) {
-
-	/* Hide / show elements per breakpoint */
-	.hide-b2 { display: none; }
-	.show-b2 { display: block; }
-
-	/* Set order per grid item */
-	.order-b2-0 {
-		order: 0;
-	}
-	@for $i from 1 through 12 {
-		.order-b2-#{ $i } {
-			order: #{ $i };
-		}
-	}
-
-}
-@media only screen and (min-width: $b3) {
-
-	/* Hide / show elements per breakpoint */
-	.hide-b3 { display: none; }
-	.show-b3 { display: block; }
-
-	/* Set order per grid item */
-	.order-b3-0 {
-		order: 0;
-	}
-	@for $i from 1 through 24 {
-		.order-b3-#{ $i } {
-			order: #{ $i };
-		}
-	}
-
-}
-@media only screen and (min-width: $b4) {
-
-	/* Hide / show elements per breakpoint */
-	.hide-b4 { display: none; }
-	.show-b4 { display: block; }
-
-	/* Set order per grid item */
-	.order-b4-0 {
-		order: 0;
-	}
-	@for $i from 1 through 24 {
-		.order-b4-#{ $i } {
-			order: #{ $i };
-		}
-	}
-
-}
-@media only screen and (min-width: $b5) {
-
-	/* Hide / show elements per breakpoint */
-	.hide-b5 { display: none; }
-	.show-b5 { display: block; }
-
-	/* Set order per grid item */
-	.order-b5-0 {
-		order: 0;
-	}
-	@for $i from 1 through 24 {
-		.order-b5-#{ $i } {
-			order: #{ $i };
-		}
-	}
-
-}
-@media only screen and (min-width: $b6) {
-
-	/* Hide / show elements per breakpoint */
-	.hide-b6 { display: none; }
-	.show-b6 { display: block; }
-
-	/* Set order per grid item */
-	.order-b6-0 {
-		order: 0;
-	}
-	@for $i from 1 through 24 {
-		.order-b6-#{ $i } {
-			order: #{ $i };
-		}
-	}
 }
 
 /* Border-radius */
