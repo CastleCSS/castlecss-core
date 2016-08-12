@@ -83,16 +83,17 @@
 		&.as-inherit 	{ align-self: inherit; 		}
 
 		/* Set order per grid item */
-		@for $i from 0 through 12 {
-
-			@if $i < 10 {
-				&.order-0#{ $i } {
-					order: #{ $i };
-				}
-			} @else {
-				&.order-#{ $i } {
-					order: #{ $i };
-				}
+		&.order-0 {
+			order: 0;
+		}
+		@for $i from 1 through 9 {
+			&.order-0#{ $i } {
+				order: #{ $i };
+			}
+		}
+		@for $i from 10 through 12 {
+			&.order-#{ $i } {
+				order: #{ $i };
 			}
 		}
 		
@@ -191,16 +192,17 @@
 			padding-left: $grid-gutter-b1;
 
 			/* Set order per grid item */
-			@for $i from 0 through 24 {
-
-				@if $i < 10 {
-					&.order-b1-0#{ $i } {
-						order: #{ $i };
-					}
-				} @else {
-					&.order-b1-#{ $i } {
-						order: #{ $i };
-					}
+			&.order-b1-0 {
+				order: 0;
+			}
+			@for $i from 1 through 9 {
+				&.order-b1-0#{ $i } {
+					order: #{ $i };
+				}
+			}
+			@for $i from 10 through 12 {
+				&.order-b1-#{ $i } {
+					order: #{ $i };
 				}
 			}
 		}
@@ -243,16 +245,17 @@
 			padding-left: $grid-gutter-b2;
 
 			/* Set order per grid item */
-			@for $i from 0 through 24 {
-
-				@if $i < 10 {
-					&.order-b2-0#{ $i } {
-						order: #{ $i };
-					}
-				} @else {
-					&.order-b2-#{ $i } {
-						order: #{ $i };
-					}
+			&.order-b2-0 {
+				order: 0;
+			}
+			@for $i from 1 through 9 {
+				&.order-b2-0#{ $i } {
+					order: #{ $i };
+				}
+			}
+			@for $i from 10 through 12 {
+				&.order-b2-#{ $i } {
+					order: #{ $i };
 				}
 			}
 		}
@@ -293,18 +296,20 @@
 			padding-left: $grid-gutter-b3;
 
 			/* Set order per grid item */
-			@for $i from 0 through 24 {
-
-				@if $i < 10 {
-					&.order-b3-0#{ $i } {
-						order: #{ $i };
-					}
-				} @else {
-					&.order-b3-#{ $i } {
-						order: #{ $i };
-					}
+			&.order-b3-0 {
+				order: 0;
+			}
+			@for $i from 1 through 9 {
+				&.order-b3-0#{ $i } {
+					order: #{ $i };
 				}
 			}
+			@for $i from 10 through 24 {
+				&.order-b3-#{ $i } {
+					order: #{ $i };
+				}
+			}
+
 		}
 	}
 
@@ -344,16 +349,17 @@
 			padding-left: $grid-gutter-b4;
 
 			/* Set order per grid item */
-			@for $i from 0 through 24 {
-
-				@if $i < 10 {
-					&.order-b4-0#{ $i } {
-						order: #{ $i };
-					}
-				} @else {
-					&.order-b4-#{ $i } {
-						order: #{ $i };
-					}
+			&.order-b4-0 {
+				order: 0;
+			}
+			@for $i from 1 through 9 {
+				&.order-b4-0#{ $i } {
+					order: #{ $i };
+				}
+			}
+			@for $i from 10 through 24 {
+				&.order-b4-#{ $i } {
+					order: #{ $i };
 				}
 			}
 		}
@@ -396,16 +402,17 @@
 			padding-left: $grid-gutter-b5;
 
 			/* Set order per grid item */
-			@for $i from 0 through 24 {
-
-				@if $i < 10 {
-					&.order-b5-0#{ $i } {
-						order: #{ $i };
-					}
-				} @else {
-					&.order-b5-#{ $i } {
-						order: #{ $i };
-					}
+			&.order-b5-0 {
+				order: 0;
+			}
+			@for $i from 1 through 9 {
+				&.order-b5-0#{ $i } {
+					order: #{ $i };
+				}
+			}
+			@for $i from 10 through 24 {
+				&.order-b5-#{ $i } {
+					order: #{ $i };
 				}
 			}
 		}
@@ -446,16 +453,17 @@
 			padding-left: $grid-gutter-b6;
 
 			/* Set order per grid item */
-			@for $i from 0 through 24 {
-
-				@if $i < 10 {
-					&.order-b6-0#{ $i } {
-						order: #{ $i };
-					}
-				} @else {
-					&.order-b6-#{ $i } {
-						order: #{ $i };
-					}
+			&.order-b6-0 {
+				order: 0;
+			}
+			@for $i from 1 through 9 {
+				&.order-b6-0#{ $i } {
+					order: #{ $i };
+				}
+			}
+			@for $i from 10 through 24 {
+				&.order-b6-#{ $i } {
+					order: #{ $i };
 				}
 			}
 		}

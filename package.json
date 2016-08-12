@@ -1,6 +1,6 @@
 {
   "name": "castlecss-core",
-  "version": "1.9.0-0",
+  "version": "1.8.0-1",
   "description": "CastleCSS a SCSS framework with modular building blocks for the web",
   "main": "index.js",
   "scripts": {
