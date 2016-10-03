@@ -1,15 +1,3 @@
-/* Breakpoints */
-$breakpoint-map: (
-	1: $b1,
-	2: $b2,
-	3: $b3,
-	4: $b4,
-	5: $b5,
-	6: $b6,
-);
-$amount-breakpoints: length($breakpoint-map);
-
-
 /* Set order per breakpoint */
 @for $i from 0 through 12 {
 	&.order-#{ $i } {
