@@ -12,18 +12,19 @@
 /* Grid basis */
 
 .g {
+	padding: 0; list-style: none;
+	margin-left: -$grid-gutter;
+
 	/* You can turn off flexbox by setting $flexbox-grid: 0; in the variables; */ 
 	@if $flexbox-grid == true {
 		display: flex;
 		flex-wrap: wrap;
 		flex-direction: row;
 	}
-	padding: 0; list-style: none;
-	margin-left: -$grid-gutter;
 
 	/* Clearfix for older browsers without flexbox */
 	&:before, &:after { 
-		content:""; display:table;
+		content: ""; display: table; clear: both;
 	}
 
 	/* Reset grid to floating */
