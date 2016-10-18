@@ -9,7 +9,7 @@
 .hide { display: none; }
 .show { display: block; }
 
-@for $b from 0 through $amount-breakpoints {
+@for $b from 1 through $amount-breakpoints {
 	$breakpoint : map-get($breakpoint-map, $b);
 	
 	@media only screen and (min-width: $breakpoint) {

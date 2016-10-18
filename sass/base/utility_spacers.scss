@@ -49,10 +49,10 @@
 .ml-0 	{ margin-left: 		0; }
 .mr-0 	{ margin-right: 	0; }
 
-
-@for $b from 0 through $amount-breakpoints {
-
-	@media only screen and (min-width: #{map-get($breakpoints, $b)}) {
+@for $b from 1 through $amount-breakpoints {
+	$breakpoint : map-get($breakpoint-map, $b);
+	
+	@media only screen and (min-width: $breakpoint) {
 
 		/* Padding */
 		.p-b#{$b}  	{ padding: 				$padding-default; }
