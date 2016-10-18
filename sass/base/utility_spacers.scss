@@ -50,68 +50,58 @@
 .mr-0 	{ margin-right: 	0; }
 
 
-$breakpoints: (
-	1: $b1,
-	2: $b2,
-	3: $b3,
-	4: $b4,
-	5: $b5,
-	6: $b6
-);
+@for $b from 0 through $amount-breakpoints {
 
-
-@for $i from 1 through 6 {
-
-	@media only screen and (min-width: #{map-get($breakpoints, $i)}) {
+	@media only screen and (min-width: #{map-get($breakpoints, $b)}) {
 
 		/* Padding */
-		.p-b#{$i}  	{ padding: 				$padding-default; }
-		.pt-b#{$i} 	{ padding-top: 			$padding-default; }
-		.pb-b#{$i} 	{ padding-bottom: 		$padding-default; }
-		.pl-b#{$i} 	{ padding-left: 		$padding-default; }
-		.pr-b#{$i} 	{ padding-right: 		$padding-default; }
+		.p-b#{$b}  	{ padding: 				$padding-default; }
+		.pt-b#{$b} 	{ padding-top: 			$padding-default; }
+		.pb-b#{$b} 	{ padding-bottom: 		$padding-default; }
+		.pl-b#{$b} 	{ padding-left: 		$padding-default; }
+		.pr-b#{$b} 	{ padding-right: 		$padding-default; }
 
-		.p-b#{$i}-2x 	{ padding: 			$padding-default*2; }
-		.pt-b#{$i}-2x { padding-top: 		$padding-default*2; }
-		.pb-b#{$i}-2x { padding-bottom: 	$padding-default*2; }
-		.pl-b#{$i}-2x { padding-left: 		$padding-default*2; }
-		.pr-b#{$i}-2x { padding-right: 		$padding-default*2; }
+		.p-b#{$b}-2x 	{ padding: 			$padding-default*2; }
+		.pt-b#{$b}-2x { padding-top: 		$padding-default*2; }
+		.pb-b#{$b}-2x { padding-bottom: 	$padding-default*2; }
+		.pl-b#{$b}-2x { padding-left: 		$padding-default*2; }
+		.pr-b#{$b}-2x { padding-right: 		$padding-default*2; }
 
-		.p-b#{$i}-3x { padding: 			$padding-default*3; }
-		.pt-b#{$i}-3x { padding-top: 		$padding-default*3; }
-		.pb-b#{$i}-3x { padding-bottom: 	$padding-default*3; }
-		.pl-b#{$i}-3x { padding-left: 		$padding-default*3; }
-		.pr-b#{$i}-3x { padding-right: 		$padding-default*3; }
+		.p-b#{$b}-3x { padding: 			$padding-default*3; }
+		.pt-b#{$b}-3x { padding-top: 		$padding-default*3; }
+		.pb-b#{$b}-3x { padding-bottom: 	$padding-default*3; }
+		.pl-b#{$b}-3x { padding-left: 		$padding-default*3; }
+		.pr-b#{$b}-3x { padding-right: 		$padding-default*3; }
 
-		.p-b#{$i}-0 	{ padding: 			0; }
-		.pt-b#{$i}-0 	{ padding-top: 		0; }
-		.pb-b#{$i}-0 	{ padding-bottom: 	0; }
-		.pl-b#{$i}-0 	{ padding-left: 	0; }
-		.pr-b#{$i}-0 	{ padding-right: 	0; }
+		.p-b#{$b}-0 	{ padding: 			0; }
+		.pt-b#{$b}-0 	{ padding-top: 		0; }
+		.pb-b#{$b}-0 	{ padding-bottom: 	0; }
+		.pl-b#{$b}-0 	{ padding-left: 	0; }
+		.pr-b#{$b}-0 	{ padding-right: 	0; }
 
 		/* Margin */
-		.m-b#{$i}  	{ margin: 				$margin-default; }
-		.mt-b#{$i} 	{ margin-top: 			$margin-default; }
-		.mb-b#{$i} 	{ margin-bottom: 		$margin-default; }
-		.ml-b#{$i} 	{ margin-left: 			$margin-default; }
-		.mr-b#{$i} 	{ margin-right: 		$margin-default; }
+		.m-b#{$b}  	{ margin: 				$margin-default; }
+		.mt-b#{$b} 	{ margin-top: 			$margin-default; }
+		.mb-b#{$b} 	{ margin-bottom: 		$margin-default; }
+		.ml-b#{$b} 	{ margin-left: 			$margin-default; }
+		.mr-b#{$b} 	{ margin-right: 		$margin-default; }
 
-		.m-b#{$i}-2x	{ margin:			$margin-default*2; }
-		.mt-b#{$i}-2x { margin-top: 		$margin-default*2; }
-		.mb-b#{$i}-2x { margin-bottom: 		$margin-default*2; }
-		.ml-b#{$i}-2x { margin-left: 		$margin-default*2; }
-		.mr-b#{$i}-2x { margin-right: 		$margin-default*2; }
+		.m-b#{$b}-2x	{ margin:			$margin-default*2; }
+		.mt-b#{$b}-2x { margin-top: 		$margin-default*2; }
+		.mb-b#{$b}-2x { margin-bottom: 		$margin-default*2; }
+		.ml-b#{$b}-2x { margin-left: 		$margin-default*2; }
+		.mr-b#{$b}-2x { margin-right: 		$margin-default*2; }
 
-		.m-b#{$i}-3x 	{ margin: 			$margin-default*3; }
-		.mt-b#{$i}-3x { margin-top: 		$margin-default*3; }
-		.mb-b#{$i}-3x { margin-bottom: 		$margin-default*3; }
-		.ml-b#{$i}-3x { margin-left: 		$margin-default*3; }
-		.mr-b#{$i}-3x { margin-right: 		$margin-default*3; }
+		.m-b#{$b}-3x 	{ margin: 			$margin-default*3; }
+		.mt-b#{$b}-3x { margin-top: 		$margin-default*3; }
+		.mb-b#{$b}-3x { margin-bottom: 		$margin-default*3; }
+		.ml-b#{$b}-3x { margin-left: 		$margin-default*3; }
+		.mr-b#{$b}-3x { margin-right: 		$margin-default*3; }
 
-		.m-b#{$i}-0 	{ margin: 			0; }
-		.mt-b#{$i}-0 	{ margin-top: 		0; }
-		.mb-b#{$i}-0 	{ margin-bottom: 	0; }
-		.ml-b#{$i}-0 	{ margin-left: 		0; }
-		.mr-b#{$i}-0 	{ margin-right: 	0; }
+		.m-b#{$b}-0 	{ margin: 			0; }
+		.mt-b#{$b}-0 	{ margin-top: 		0; }
+		.mb-b#{$b}-0 	{ margin-bottom: 	0; }
+		.ml-b#{$b}-0 	{ margin-left: 		0; }
+		.mr-b#{$b}-0 	{ margin-right: 	0; }
 	}
 }
