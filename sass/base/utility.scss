@@ -1,3 +1,43 @@
+/* Set order per breakpoint */
+@for $i from 0 through 12 {
+	&.order-#{ $i } {
+		order: #{ $i };
+	}
+}
+
+/* Hide / show elements per breakpoint */
+.hide { display: none; }
+.show { display: block; }
+
+@for $b from 0 through $amount-breakpoints {
+	$breakpoint : map-get($breakpoint-map, $b);
+	
+	@media only screen and (min-width: $breakpoint) {
+	
+		/* Hide / show elements per breakpoint */
+		.hide-b#{$b} { display: none; }
+		.show-b#{$b} { display: block; }
+
+		@if $b > 0 {
+			/* Set order per breakpoint */
+			@for $i from 0 through 12 {
+				&.order-b#{$b}-#{$i} {
+					order: #{$i};
+				}
+			}
+		}
+		@if $b > 3 {
+			/* Set order per breakpoint */
+			@for $i from 13 through 24 {
+				&.order-b#{$b}-#{ $i } {
+					order: #{ $i };
+				}
+			}
+		}
+
+	}
+}
+
 /* Unstyled list */
 .list-unstyled {
 	margin: 0;

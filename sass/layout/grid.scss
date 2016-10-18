@@ -68,7 +68,7 @@
 		Used to be .gi, the new method is less susceptible to errors
 		Every grid item has the standard gutter spacing from $grid-gutter
 	*/
-		
+
 	> * {
 		/* Floating as fallback for older browsers */
 		float: left;
@@ -81,14 +81,6 @@
 		&.as-baseline 	{ align-self: baseline; 	}
 		&.as-initial 	{ align-self: initial; 		}
 		&.as-inherit 	{ align-self: inherit; 		}
-	
-		/* Set order per grid item */
-		@for $i from 0 through 12 {
-
-			&.order-#{ $i } {
-				order: #{ $i };
-			}
-		}
 		
 	}
 
@@ -152,10 +144,6 @@
 }
 
 .b0_push_none { margin-left: 0; }
-.b0_hide { display: none; }
-.b0_show { display: block; }
-
-
 
 // $b1
 @media only screen and (min-width: $b1) {
@@ -185,13 +173,9 @@
 			padding-left: $grid-gutter-b1;
 		}
 	}
-
+	
 	.b1_push_none { margin-left: 0; }
 
-	.b1_hide { display: none; }
-	.b1_show {
-		display: block;
-	}
 }
 
 
@@ -226,10 +210,6 @@
 
 	.b2_push_none { margin-left: 0; }
 
-	.b2_hide { display: none; }
-	.b2_show {
-		display: block;
-	}
 }
 
 // $b3
@@ -257,6 +237,7 @@
 		
 		> * {
 			padding-left: $grid-gutter-b3;
+
 		}
 	}
 
@@ -265,10 +246,6 @@
 
 	.b3_push_none { margin-left: 0; }
 
-	.b3_hide { display: none; }
-	.b3_show {
-		display: block;
-	}
 }
 
 // $b4
@@ -302,10 +279,6 @@
 
 	.b4_push_none { margin-left: 0; }
 
-	.b4_hide { display: none; }
-	.b4_show {
-		display: block;
-	}
 
 }
 
@@ -340,10 +313,6 @@
 
 	.b5_push_none { margin-left: 0; }
 
-	.b5_hide { display: none; }
-	.b5_show {
-		display: block;
-	}
 }
 // $b6
 @media only screen and (min-width: $b6) {
@@ -367,7 +336,7 @@
 		margin-left: -$grid-gutter-b6;
 		
 		> * {
-			padding-left: $grid-gutter-b6;
+			padding-left: $grid-gutter-b6;			
 		}
 	}
 
@@ -376,8 +345,4 @@
 
 	.b6_push_none { margin-left: 0; }
 
-	.b6_hide { display: none; }
-	.b6_show {
-		display: block;
-	}
 }

@@ -29,6 +29,18 @@ $b4: 1024px;
 $b5: 1280px;
 $b6: 1600px;
 
+/* Mapping for breakpoint loops
+   Should be the same as breakpoints above */
+$breakpoint-map: (
+	1: $b1,
+	2: $b2,
+	3: $b3,
+	4: $b4,
+	5: $b5,
+	6: $b6,
+);
+$amount-breakpoints: length($breakpoint-map);
+
 /* Container sizes */
 $container: 100%;
 $container-b1: 100%;
