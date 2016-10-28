@@ -26,7 +26,7 @@
 				}
 			}
 		}
-		@if $b > 3 {
+		@if $b > 2 {
 			/* Set order per breakpoint */
 			@for $i from 13 through 24 {
 				&.order-b#{$b}-#{ $i } {
