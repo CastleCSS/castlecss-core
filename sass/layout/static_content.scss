@@ -12,35 +12,15 @@
 	max-width: 100%;
 }
 
-@media only screen and (min-width: $b1) {
-	.container {
-		width: $container-b1;
-	}
-}
-@media only screen and (min-width: $b2) {
-	.container {
-		width: $container-b2;
-	}
-}
-
-@media only screen and (min-width: $b3) {
-
-	.container {
-		width: $container-b3;
-	}
-}
-
-@media only screen and (min-width: $b4) {
+@for $b from 1 through $amount-breakpoints {
+	$breakpoint : map-get($breakpoint-map, $b);
+	$containerWidth: map-get($container-map, $b);
 	
-	.container {
-		width: $container-b4;
-	}
-
-}
-
-@media only screen and (min-width: $b5) {
-
-	.container {
-		width: $container-b5;
-	}
+	@media only screen and (min-width: $breakpoint) {
+		
+		.container {
+			width: #{$containerWidth};
+		}
+	}	
+	
 }

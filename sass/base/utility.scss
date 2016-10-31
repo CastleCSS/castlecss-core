@@ -1,3 +1,43 @@
+/* Set order per breakpoint */
+@for $i from 0 through 12 {
+	&.order-#{ $i } {
+		order: #{ $i };
+	}
+}
+
+/* Hide / show elements per breakpoint */
+.hide { display: none; }
+.show { display: block; }
+
+@for $b from 1 through $amount-breakpoints {
+	$breakpoint : map-get($breakpoint-map, $b);
+	
+	@media only screen and (min-width: $breakpoint) {
+	
+		/* Hide / show elements per breakpoint */
+		.hide-b#{$b} { display: none; }
+		.show-b#{$b} { display: block; }
+
+		@if $b > 0 {
+			/* Set order per breakpoint */
+			@for $i from 0 through 12 {
+				&.order-b#{$b}-#{$i} {
+					order: #{$i};
+				}
+			}
+		}
+		@if $b > 2 {
+			/* Set order per breakpoint */
+			@for $i from 13 through 24 {
+				&.order-b#{$b}-#{ $i } {
+					order: #{ $i };
+				}
+			}
+		}
+
+	}
+}
+
 /* Unstyled list */
 .list-unstyled {
 	margin: 0;
@@ -10,36 +50,17 @@
 .ta-right	{ text-align: right;  }
 .ta-center	{ text-align: center; }
 
-@media only screen and (min-width: $b1) {
-	.ta-left-b1 	{ text-align: left;		}
-	.ta-right-b1 	{ text-align: right;	}
-	.ta-center-b1 	{ text-align: center;	}
-}
-@media only screen and (min-width: $b2) {
-	.ta-left-b2 	{ text-align: left;		}
-	.ta-right-b2 	{ text-align: right;	}
-	.ta-center-b2 	{ text-align: center;	}
-}
-@media only screen and (min-width: $b3) {
+@for $b from 1 through $amount-breakpoints {
+	$breakpoint : map-get($breakpoint-map, $b);
+	
+	@media only screen and (min-width: $breakpoint) {
+		
+		.ta-left-b#{$b} 	{ text-align: left;		}
+		.ta-right-b#{$b} 	{ text-align: right;	}
+		.ta-center-b#{$b} 	{ text-align: center;	}
 
-	.ta-left-b3 	{ text-align: left;		}
-	.ta-right-b3 	{ text-align: right;	}
-	.ta-center-b3 	{ text-align: center;	}
-}
-@media only screen and (min-width: $b4) {
-	.ta-left-b4 	{ text-align: left;		}
-	.ta-right-b4 	{ text-align: right; 	}
-	.ta-center-b4 	{ text-align: center;	}
-}
-@media only screen and (min-width: $b5) {
-	.ta-left-b5 	{ text-align: left; 	}
-	.ta-right-b5 	{ text-align: right; 	}
-	.ta-center-b5 	{ text-align: center; }
-}
-@media only screen and (min-width: $b6) {
-	.ta-left-b6 	{ text-align: left;		}
-	.ta-right-b6 	{ text-align: right; 	}
-	.ta-center-b6 	{ text-align: center;	}
+	}
+
 }
 
 /* Floating and clearing classes per breakpoint */
@@ -51,59 +72,21 @@
 .cb { clear: both; }
 .cn { clear: none; }
 
-@media only screen and (min-width: $b1) {
-	.fl-b1 { float: left; }
-	.fr-b1 { float: right; }
-	.fn-b1 { float: none; }
-	.cl-b1 { clear: left; }
-	.cr-b1 { clear: right;}
-	.cb-b1 { clear: both; }
-	.cn-b1 { clear: none; }
-}
-@media only screen and (min-width: $b2) {
-	.fl-b2 { float: left; }
-	.fr-b2 { float: right; }
-	.fn-b2 { float: none; }
-	.cl-b2 { clear: left; }
-	.cr-b2 { clear: right;}
-	.cb-b2 { clear: both; }
-	.cn-b2 { clear: none; }
-}
-@media only screen and (min-width: $b3) {
-	.fl-b3 { float: left; }
-	.fr-b3 { float: right; }
-	.fn-b3 { float: none; }
-	.cl-b3 { clear: left; }
-	.cr-b3 { clear: right;}
-	.cb-b3 { clear: both; }
-	.cn-b3 { clear: none; }
-}
-@media only screen and (min-width: $b4) {
-	.fl-b4 { float: left; }
-	.fr-b4 { float: right; }
-	.fn-b4 { float: none; }
-	.cl-b4 { clear: left; }
-	.cr-b4 { clear: right;}
-	.cb-b4 { clear: both; }
-	.cn-b4 { clear: none; }
-}
-@media only screen and (min-width: $b5) {
-	.fl-b5 { float: left; }
-	.fr-b5 { float: right; }
-	.fn-b5 { float: none; }
-	.cl-b5 { clear: left; }
-	.cr-b5 { clear: right;}
-	.cb-b5 { clear: both; }
-	.cn-b5 { clear: none; }
-}
-@media only screen and (min-width: $b6) {
-	.fl-b6 { float: left; }
-	.fr-b6 { float: right; }
-	.fn-b6 { float: none; }
-	.cl-b6 { clear: left; }
-	.cr-b6 { clear: right;}
-	.cb-b6 { clear: both; }
-	.cn-b6 { clear: none; }
+@for $b from 1 through $amount-breakpoints {
+	$breakpoint : map-get($breakpoint-map, $b);
+	
+	@media only screen and (min-width: $breakpoint) {
+
+		.fl-b#{$b} { float: left; }
+		.fr-b#{$b} { float: right; }
+		.fn-b#{$b} { float: none; }
+		.cl-b#{$b} { clear: left; }
+		.cr-b#{$b} { clear: right;}
+		.cb-b#{$b} { clear: both; }
+		.cn-b#{$b} { clear: none; }
+
+	}
+	
 }
 
 /* Border-radius */

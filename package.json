@@ -1,6 +1,6 @@
 {
   "name": "castlecss-core",
-  "version": "1.8.1",
+  "version": "2.0.0",
   "description": "CastleCSS a SCSS framework with modular building blocks for the web",
   "main": "index.js",
   "scripts": {
@@ -25,5 +25,5 @@
   "bugs": {
     "url": "https://github.com/CastleCSS/castlecss-core/issues"
   },
-  "homepage": "https://github.com/CastleCSS/castlecss-core#readme"
+  "homepage": "http://www.castlecss.com"
 }
