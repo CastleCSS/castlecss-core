@@ -2,12 +2,12 @@
 ![CastleCSS logo @CastleCss.com](https://www.doordarius.nl/castlecss-logo-250.png)
 
 ## CastleCSS Framework
-The core files are part of the [Full CastleCSS Package](https://github.com/CastleCSS/castlecss)
+The core files are part of the [CastleCSS Package](https://github.com/CastleCSS/castlecss)
 
 
 ## How to install
-- Install via [NPM](https://www.npmjs.com/): ```npm install castlecss-core```
-- Require it in your own NPMJS package
+- Install via [npm](https://www.npmjs.com/): ```npm install castlecss-core```
+- Require it in your own npm package
 - Download or clone the package
 
 ## Updating files
