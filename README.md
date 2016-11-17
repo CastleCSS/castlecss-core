@@ -18,37 +18,55 @@ CastleCSS is built so it's easy to update, you can just download make it your ow
 ## Documentation and examples
 You can find the documentation and examples at http://www.castlecss.com and [castlecss-docs](https://github.com/CastleCSS/castlecss-buttons)
 
-## Setup
-Your project should have a setup similair to this (included in the [Full CastleCSS Package](https://github.com/CastleCSS/castlecss)):
-With this you make sure your own variables overwrite the castle-core variables and your setup is still updatable.
+
+## Basic structure
+The basis structure for your website should look similar like this:
 
 ```
-| Your project/
+| Project directory/
 |
-|-- scss/ 
-| |-- /* Custom project specific scss files here */
-| |-- Main.scss
-| |
 |-- node_modules/
-| | 
-| | /*	CastleCSS files included automatically here */
-| | castlecss-core/
-| | castlecss-buttons/
-| | castlecss-etc ;)/
+| | -- castlecss-core/
+| | --castlecss-buttons/
+| | --castlecss-notifications/
+| |
+|-- scss/
+| |-- main.scss
+| |-- variables.scss
+| |
+|-- img/
+|-- dist/
+| |-- styles.min.css
+| |-- styles.min.map
+| |
+|-- index.html
+|-- Gruntfile.js
+|-- package.json
 ```
 
-### Main.scss
-Your main.scss should have a setup similair to this (included in the [Full CastleCSS Package](https://github.com/CastleCSS/castlecss)):
+### main.scss
+Your main.scss should have the following set-up:
 
 ```
-/*  core variable files */
+/* 	CastleCSS Core variables */
 @import "node_modules/castlecss-core/sass/variables";
-/*  Your own variables so they overwrite the core */
+
+/* 	Your variables */
 @import "variables";
-/*  rest of core files */
+
+/* 	Remaining Core files and other CastleCSS modules */
 @import "node_modules/castlecss-core/sass/main";
- 
-/*  Include your own files below this line
-    --------------------------------------
-*/
+@import "node_modules/castlecss-buttons/sass/main";
+@import "node_modules/castlecss-notifications/sass/main";
+
+/* Include your own files below this line
+   -------------------------------------- */
+
+
+
+/* --------------------------------------
+   Include your own files above this line */
+
+@import "node_modules/castlecss-core/sass/base/utility";
+@import "node_modules/castlecss-core/sass/base/utility_spacers";
 ```
