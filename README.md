@@ -16,7 +16,7 @@ CastleCSS is built so it's easy to update, you can just download make it your ow
 ```npm update castlecss-core```
 
 ## Documentation and examples
-You can find the documentation and examples at http://www.castlecss.com and [castlecss-docs](https://github.com/CastleCSS/castlecss-buttons)
+You can find the documentation and examples at http://www.castlecss.com and [castlecss-docs](https://github.com/CastleCSS/castlecss-docs)
 
 
 ## Basic structure
