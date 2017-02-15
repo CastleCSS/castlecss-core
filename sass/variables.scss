@@ -13,6 +13,7 @@
 */
 $color01:  	#fff;
 $color02:  	#000;
+$color03: 	#eeeeee;
 
 /*
 	Theme colors
@@ -119,4 +120,35 @@ $font-sec: Arial, Helvetica, sans-serif;
 $font-size-default: 1.6rem;
 $line-height-default: 1.5;
 
+/* Breadcrumbs seperator */
 $breadcrumbs-separator: '\00bb';
+
+/* Form specific variables */
+
+/* Standard Inputs */
+$input-height: 4.8rem;
+$input-bg-color: $color01;
+$input-bg-color-focus: $color01;
+$input-color: $color02;
+$input-color-focus: $color02;
+$input-border-color: #eee;
+$input-border-color-focus: #eee;
+$input-border: 1px solid $input-border-color;
+
+/* Custom select */
+$select-arrow: "\203A";
+
+/* Labels */
+$input-label-color: #aaa;
+$input-label-color-focus: #aaa;
+
+/* Radios and Checkboxes*/
+$input-control-color: #eee;
+$input-control-color-focus: $theme01;
+
+/* Form transitions */
+$input-transition: .1s all ease-in-out;
+
+/* Icons */
+$input-icon-color: #eee;
+$input-icon-bg-color: #797979;
