@@ -1,5 +1,11 @@
 /* Padding */
 
+.p-0	{ padding: 			0; }
+.pt-0 	{ padding-top: 		0; }
+.pb-0 	{ padding-bottom: 	0; }
+.pl-0 	{ padding-left: 	0; }
+.pr-0 	{ padding-right: 	0; }
+
 .p  	{ padding: 			$padding-default; }
 .pt 	{ padding-top: 		$padding-default; }
 .pb 	{ padding-bottom: 	$padding-default; }
@@ -18,13 +24,14 @@
 .pl-3x 	{ padding-left: 	$padding-default*3; }
 .pr-3x 	{ padding-right: 	$padding-default*3; }
 
-.p-0	{ padding: 			0; }
-.pt-0 	{ padding-top: 		0; }
-.pb-0 	{ padding-bottom: 	0; }
-.pl-0 	{ padding-left: 	0; }
-.pr-0 	{ padding-right: 	0; }
 
 /* Margin */
+.m-0	{ margin: 			0; }
+.mt-0 	{ margin-top: 		0; }
+.mb-0 	{ margin-bottom: 	0; }
+.ml-0 	{ margin-left: 		0; }
+.mr-0 	{ margin-right: 	0; }
+
 .m  	{ margin:			$margin-default; }
 .mt 	{ margin-top: 		$margin-default; }
 .mb 	{ margin-bottom: 	$margin-default; }
@@ -43,11 +50,7 @@
 .ml-3x 	{ margin-left: 		$margin-default*3; }
 .mr-3x 	{ margin-right: 	$margin-default*3; }
 
-.m-0	{ margin: 			0; }
-.mt-0 	{ margin-top: 		0; }
-.mb-0 	{ margin-bottom: 	0; }
-.ml-0 	{ margin-left: 		0; }
-.mr-0 	{ margin-right: 	0; }
+
 
 @for $b from 1 through $amount-breakpoints {
 	$breakpoint : map-get($breakpoint-map, $b);
@@ -55,6 +58,12 @@
 	@media only screen and (min-width: $breakpoint) {
 
 		/* Padding */
+		.p-b#{$b}-0 	{ padding: 			0; }
+		.pt-b#{$b}-0 	{ padding-top: 		0; }
+		.pb-b#{$b}-0 	{ padding-bottom: 	0; }
+		.pl-b#{$b}-0 	{ padding-left: 	0; }
+		.pr-b#{$b}-0 	{ padding-right: 	0; }
+
 		.p-b#{$b}  	{ padding: 				$padding-default; }
 		.pt-b#{$b} 	{ padding-top: 			$padding-default; }
 		.pb-b#{$b} 	{ padding-bottom: 		$padding-default; }
@@ -73,13 +82,15 @@
 		.pl-b#{$b}-3x { padding-left: 		$padding-default*3; }
 		.pr-b#{$b}-3x { padding-right: 		$padding-default*3; }
 
-		.p-b#{$b}-0 	{ padding: 			0; }
-		.pt-b#{$b}-0 	{ padding-top: 		0; }
-		.pb-b#{$b}-0 	{ padding-bottom: 	0; }
-		.pl-b#{$b}-0 	{ padding-left: 	0; }
-		.pr-b#{$b}-0 	{ padding-right: 	0; }
+		
 
 		/* Margin */
+		.m-b#{$b}-0 	{ margin: 			0; }
+		.mt-b#{$b}-0 	{ margin-top: 		0; }
+		.mb-b#{$b}-0 	{ margin-bottom: 	0; }
+		.ml-b#{$b}-0 	{ margin-left: 		0; }
+		.mr-b#{$b}-0 	{ margin-right: 	0; }
+
 		.m-b#{$b}  	{ margin: 				$margin-default; }
 		.mt-b#{$b} 	{ margin-top: 			$margin-default; }
 		.mb-b#{$b} 	{ margin-bottom: 		$margin-default; }
@@ -98,10 +109,5 @@
 		.ml-b#{$b}-3x { margin-left: 		$margin-default*3; }
 		.mr-b#{$b}-3x { margin-right: 		$margin-default*3; }
 
-		.m-b#{$b}-0 	{ margin: 			0; }
-		.mt-b#{$b}-0 	{ margin-top: 		0; }
-		.mb-b#{$b}-0 	{ margin-bottom: 	0; }
-		.ml-b#{$b}-0 	{ margin-left: 		0; }
-		.mr-b#{$b}-0 	{ margin-right: 	0; }
 	}
 }
