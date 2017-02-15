@@ -124,20 +124,31 @@ $line-height-default: 1.5;
 $breadcrumbs-separator: '\00bb';
 
 /* Form specific variables */
-$input-height: 4.8rem;
 
+/* Standard Inputs */
+$input-height: 4.8rem;
+$input-bg-color: $color01;
+$input-bg-color-focus: $color01;
+$input-color: $color02;
+$input-color-focus: $color02;
+$input-border-color: #eee;
+$input-border-color-focus: #eee;
+$input-border: 1px solid $input-border-color;
+
+/* Custom select */
+$select-arrow: "\203A";
+
+/* Labels */
 $input-label-color: #aaa;
 $input-label-color-focus: #aaa;
 
-$input-border-color: #eee;
-$input-border-color-focus: #eee;
-
+/* Radios and Checkboxes*/
 $input-control-color: #eee;
 $input-control-color-focus: $theme01;
 
-$input-border: 1px solid $input-border-color;
+/* Form transitions */
+$input-transition: .1s all ease-in-out;
 
-$input-transition: 0.1s ease-in-out;
-
+/* Icons */
 $input-icon-color: #eee;
 $input-icon-bg-color: #797979;
