@@ -1,0 +1,30 @@
+/*	HEADERS
+*	Always try to use a .head class for SEO reasons
+*	Only style on h1-h6 when the client uses an editor like TinyMCE and you can't influence the classes
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.head,
+.head1,
+.head2,
+.head3,
+.head4,
+.head5,
+.head6 {
+	font-family: $font-sec;
+    margin: 0 0 .8rem;
+    line-height: 1.3;
+    font-size: 2.4rem;
+}
+
+h1, .head1 	{ font-size: 3.0rem; margin-bottom: .2rem; }
+h2, .head2 	{ font-size: 2.6rem; margin-bottom: .3rem; }
+h3, .head3 	{ font-size: 2.4rem; margin-bottom: .2rem; }
+h4, .head4 	{ font-size: 2.2rem; margin-bottom: .2rem; }
+h5, .head5 	{ font-size: 2.0rem; margin-bottom: .4rem; }
+h6, .head6 	{ font-size: 1.6rem; margin-bottom: .6rem; }

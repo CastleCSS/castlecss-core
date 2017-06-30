@@ -103,8 +103,8 @@
 }
 
 /* Clearfix */
-.cf:before, .cf:after, ul.fields > li:before, ul.fields > li:after {content:"";display:table;}
-.cf:after, .g:after, ul.fields > li:after {clear:both;}
+.cf:before, .cf:after {content:"";display:table;}
+.cf:after, .g:after {clear:both;}
 .cl { clear:both;height:0;overflow:hidden;visibility:hidden;font:0/0 x; }
 
 /* Alignment of images + captions */
