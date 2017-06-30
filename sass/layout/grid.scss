@@ -15,6 +15,8 @@
 	padding: 0; list-style: none;
 	margin-left: -$grid-gutter;
 
+	
+
 	/* You can turn off flexbox by setting $flexbox-grid: 0; in the variables; */ 
 	@if $flexbox-grid == true {
 		display: flex;
@@ -23,7 +25,7 @@
 	}
 
 	/* Clearfix for older browsers without flexbox */
-	&:before, &:after { 
+	&:before, &:after {
 		content: " ";
 		visibility: hidden;
 		display: block;
@@ -32,9 +34,31 @@
 	}
 
 	/* Reset grid to floating */
+	&-float {
+		display: block;
+	}
+	
+	/* Make children of grid items equal height */
+	&-equal-height {
+
+		> * {
+			display: flex;
+
+			> * {
+				flex: 1;
+
+			}
+		}
+	}
+	/* 	
+		DO NOT USE; Use g-float.
+		Legacy class for reset grid to floating
+		TODO: Remove in new major version
+	*/
 	&.grid-float {
 		display: block;
 	}
+
 
 	&.dir-row				{ flex-direction: row; 	  }
 	&.dir-row-reverse 		{ flex-direction: row-reverse; 	  }
