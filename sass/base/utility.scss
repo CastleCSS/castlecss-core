@@ -45,6 +45,14 @@
 	list-style: none;
 }
 
+.equal-height {
+	display: flex;
+
+	> * {
+		flex: 1;
+	}
+}
+
 /* Text alignment per breakpoint */
 .ta-left	{ text-align: left;   }
 .ta-right	{ text-align: right;  }
