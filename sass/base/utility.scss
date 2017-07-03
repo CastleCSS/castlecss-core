@@ -45,6 +45,14 @@
 	list-style: none;
 }
 
+.equal-height {
+	display: flex;
+
+	> * {
+		flex: 1;
+	}
+}
+
 /* Text alignment per breakpoint */
 .ta-left	{ text-align: left;   }
 .ta-right	{ text-align: right;  }
@@ -92,6 +100,57 @@
 /* Border-radius */
 .radius {
 	border-radius: $radius;
+}
+
+/* Helper classes for color and background-color */
+.color-color01 {
+	color: $color01;
+}
+.color-color02 {
+	color: $color02;
+}
+.color-color03 {
+	color: $color03;
+}
+.bgcolor-color01 {
+	background-color: $color01;
+}
+.bgcolor-color02 {
+	background-color: $color02;
+}
+.bgcolor-color03 {
+	background-color: $color03;
+}
+
+.color-theme01 {
+	color: $theme01;
+}
+.color-theme02 {
+	color: $theme02;
+}
+.color-theme03 {
+	color: $theme03;
+}
+.color-theme04 {
+	color: $theme04;
+}
+.color-theme05 {
+	color: $theme05;
+}
+.bgcolor-theme01 {
+	background-color: $theme01;
+}
+.bgcolor-theme02 {
+	background-color: $theme02;
+}
+.bgcolor-theme03 {
+	background-color: $theme03;
+}
+.bgcolor-theme04 {
+	background-color: $theme04;
+}
+.bgcolor-theme05 {
+	background-color: $theme05;
 }
 
 /* Clearfix */
