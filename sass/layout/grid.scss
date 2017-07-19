@@ -179,35 +179,37 @@
 @for $b from 1 through 2 {
 	$breakpoint : map-get($breakpoint-map, $b);
 	$gutter		: map-get($gutter-map, $b);
-
-	@for $i from 1 through 12 {
-		$width: ($i/12) * 100%;
-
-		@if $i < 10 {
-			.b#{$b}_0#{ $i } { width: $width; }
-
-			.b#{$b}_push_0#{ $i } { margin-left: $width; }
-		} @else {
-
-			.b#{$b}_#{ $i } { width: $width; }
-
-			.b#{$b}_push_#{ $i } { margin-left: $width; }
-		}
-		@for $i from 13 through 24 {
+	
+	@media only screen and (min-width: $breakpoint) {
+	
+		@for $i from 1 through 12 {
 			$width: ($i/12) * 100%;
+
+			@if $i < 10 {
+				.b#{$b}_0#{ $i } { width: $width; }
+
+				.b#{$b}_push_0#{ $i } { margin-left: $width; }
+			} @else {
+
+				.b#{$b}_#{ $i } { width: $width; }
+
+				.b#{$b}_push_#{ $i } { margin-left: $width; }
+			}
+			@for $i from 13 through 24 {
+				$width: ($i/12) * 100%;
+			}
 		}
-	}
 
-	.g {
-		margin-left: -#{$gutter};
-		
-		> * {
-			padding-left: $gutter;
+		.g {
+			margin-left: -#{$gutter};
+			
+			> * {
+				padding-left: $gutter;
+			}
 		}
+
+		.b#{$b}_push_none { margin-left: 0; }
 	}
-
-	.b2_push_none { margin-left: 0; }
-
 }
 
 /* 24 column grid for $b3 and higher */
