@@ -5,18 +5,18 @@
 The core files are part of the [CastleCSS Package](https://github.com/CastleCSS/castlecss)
 
 ## How to install
-- Install via [npm](https://www.npmjs.com/): ```npm install castlecss-core```
+- Download the the [boilerplate](https://github.com/CastleCSS/castlecss-boilerplate/), CastleCSS-Core is included in the Boilerplate
+- Install via [npm](https://www.npmjs.com/): ```npm install castlecss-core -S```
 - Require it in your own npm package
 - Download or clone the package
 
 ## Updating files
-CastleCSS is built so it's easy to update, you can just download make it your own as long as you don't ovewrite the core files. 
+CastleCSS is built so it's easy to update, you can just download make it your own as long as you don't overwrite the core files. 
 
 ```npm update castlecss-core```
 
 ## Documentation and examples
 You can find the documentation and examples at http://www.castlecss.com and [castlecss-docs](https://github.com/CastleCSS/castlecss-docs)
-
 
 ## Adjusting the variables
 Because of the unique update-able setup of CastleCSS you need a seperate variable file to overwrite the default CastleCSS variables. There are a few ways to do this: 
