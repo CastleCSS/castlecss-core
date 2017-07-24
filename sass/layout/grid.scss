@@ -150,7 +150,9 @@
 
 }
 
-/* Grid widths */
+/* 	Grid widths 
+	12 column grid for $b0
+*/
 
 @for $i from 1 through 12 {
 	$width: ($i/12) * 100%;
@@ -173,204 +175,157 @@
 
 .b0_push_none { margin-left: 0; }
 
-// $b1
-@media only screen and (min-width: $b1) {
+/* 12 column grid for $b1 and $b2 */
+@for $b from 1 through 2 {
+	$breakpoint : map-get($breakpoint-map, $b);
+	$gutter		: map-get($gutter-map, $b);
+	
+	@media only screen and (min-width: $breakpoint) {
+	
+		@for $i from 1 through 12 {
+			$width: ($i/12) * 100%;
 
-	@for $i from 1 through 12 {
-		$width: ($i/12) * 100%;
+			@if $i < 10 {
+				.b#{$b}_0#{ $i } { width: $width; }
 
-		@if $i < 10 {
-			.b1_0#{ $i } { width: $width; }
+				.b#{$b}_push_0#{ $i } { margin-left: $width; }
+			} @else {
 
-			.b1_push_0#{ $i } { margin-left: $width; }
-		} @else {
+				.b#{$b}_#{ $i } { width: $width; }
 
-			.b1_#{ $i } { width: $width; }
+				.b#{$b}_push_#{ $i } { margin-left: $width; }
+			}
+			@for $i from 13 through 24 {
+				$width: ($i/12) * 100%;
+			}
+		}
 
-			.b1_push_#{ $i } { margin-left: $width; }
+		.g {
+			margin-left: -#{$gutter};
+			
+			> * {
+				padding-left: $gutter;
+			}
+		}
+
+		.b#{$b}_push_none { margin-left: 0; }
+
+		/* No Gutter */
+		&.gutter-b#{$b}-none { 
+			margin-left: 0;
+
+			> * {
+				padding-left: 0;
+			}
+		}
+
+		/* Smaller gutter */
+		&.gutter-b#{$b}-small {
+			margin-left: -$grid-gutter / 2;
+
+			> * {
+				padding-left: $grid-gutter / 2;
+			}
+		}
+
+		/* Larger gutter */
+		&.gutter-b#{$b}-large {
+			margin-left: -$grid-gutter * 2;
+
+			> * {
+				padding-left: $grid-gutter * 2;
+			}
+		}
+
+		/* Normal gutter */
+		&.gutter-b#{$b}-normal {
+			margin-left: -$grid-gutter;
+
+			> * {
+				padding-left: $grid-gutter;
+			}
 		}
 	}
-	@for $i from 13 through 24 {
-		$width: ($i/12) * 100%;
-	}
+}
 
-	.g {
-		margin-left: -$grid-gutter-b1;
+/* 24 column grid for $b3 and higher */
+@for $b from 3 through $amount-breakpoints {
+	$breakpoint : map-get($breakpoint-map, $b);
+	$gutter		: map-get($gutter-map, $b);
 
-		> * {
-			padding-left: $grid-gutter-b1;
+	@media only screen and (min-width: $breakpoint) {
+
+		@for $i from 1 through 24 {
+			$width: ($i/24) * 100%;
+
+			@if $i < 10 {
+
+				.b#{$b}_0#{ $i } { width: $width; }
+
+				.b#{$b}_push_0#{ $i } { margin-left: $width; }
+				
+			} @else {
+
+				.b#{$b}_#{ $i } { width: $width; }
+
+				.b#{$b}_push_#{ $i } { margin-left: $width; }
+			}
+
+			@for $i from 13 through 48 {
+				$width: ($i/24) * 100%;
+			}
 		}
+
+		.g {
+			margin-left: -#{$gutter};
+			
+			> * {
+				padding-left: $gutter;
+
+			}
+		}
+
+		.b#{$b}_x5 { width: 20%; }
+		.b#{$b}_x7 { width: 14.28571428571429%; }
+
+		.b#{$b}_push_none { margin-left: 0; }
+
+		/* No gutter */
+		&.gutter-b#{$b}-none { 
+			margin-left: 0;
+
+			> * {
+				padding-left: 0;
+			}
+		}
+
+		/* Smaller gutter */
+		&.gutter-b#{$b}-small {
+			margin-left: -$grid-gutter / 2;
+
+			> * {
+				padding-left: $grid-gutter / 2;
+			}
+		}
+
+		/* Larger gutter */
+		&.gutter-b#{$b}-large {
+			margin-left: -$grid-gutter * 2;
+
+			> * {
+				padding-left: $grid-gutter * 2;
+			}
+		}
+		
+		/* Normal gutter */
+		&.gutter-b#{$b}-normal {
+			margin-left: -$grid-gutter;
+
+			> * {
+				padding-left: $grid-gutter;
+			}
+		}
+
 	}
 	
-	.b1_push_none { margin-left: 0; }
-
-}
-
-
-// $b2
-@media only screen and (min-width: $b2) {
-
-	@for $i from 1 through 12 {
-		$width: ($i/12) * 100%;
-
-		@if $i < 10 {
-			.b2_0#{ $i } { width: $width; }
-
-			.b2_push_0#{ $i } { margin-left: $width; }
-		} @else {
-
-			.b2_#{ $i } { width: $width; }
-
-			.b2_push_#{ $i } { margin-left: $width; }
-		}
-		@for $i from 13 through 24 {
-			$width: ($i/12) * 100%;
-		}
-	}
-
-	.g {
-		margin-left: -$grid-gutter-b2;
-		
-		> * {
-			padding-left: $grid-gutter-b2;
-		}
-	}
-
-	.b2_push_none { margin-left: 0; }
-
-}
-
-// $b3
-@media only screen and (min-width: $b3) {
-
-	@for $i from 1 through 24 {
-		$width: ($i/24) * 100%;
-
-		@if $i < 10 {
-			.b3_0#{ $i } { width: $width; }
-
-			.b3_push_0#{ $i } { margin-left: $width; }
-		} @else {
-			.b3_#{ $i } { width: $width; }
-
-			.b3_push_#{ $i } { margin-left: $width; }
-		}
-		@for $i from 13 through 48 {
-			$width: ($i/24) * 100%;
-		}
-	}
-
-	.g {
-		margin-left: -$grid-gutter-b3;
-		
-		> * {
-			padding-left: $grid-gutter-b3;
-
-		}
-	}
-
-	.b3_x5 { width: 20%; }
-	.b3_x7 { width: 14.28571428571429%; }
-
-	.b3_push_none { margin-left: 0; }
-
-}
-
-// $b4
-@media only screen and (min-width: $b4) {
-
-	@for $i from 1 through 24 {
-		$width: ($i/24) * 100%;
-
-		@if $i < 10 {
-			.b4_0#{ $i } { width: $width; }
-
-			.b4_push_0#{ $i } { margin-left: $width; }
-		} @else {
-
-			.b4_#{ $i } { width: $width; }
-
-			.b4_push_#{ $i } { margin-left: $width; }
-		}
-	}
-
-	.g {
-		margin-left: -$grid-gutter-b4;
-		
-		> * {
-			padding-left: $grid-gutter-b4;
-		}
-	}
-
-	.b4_x5 { width: 20%; }
-	.b4_x7 { width: 14.28571428571429%; }
-
-	.b4_push_none { margin-left: 0; }
-
-
-}
-
-// $b5
-@media only screen and (min-width: $b5) {
-
-	@for $i from 1 through 24 {
-		$width: ($i/24) * 100%;
-
-		@if $i < 10 {
-			.b5_0#{ $i } { width: $width; }
-
-			.b5_push_0#{ $i } { margin-left: $width; }
-		} @else {
-
-			.b5_#{ $i } { width: $width; }
-
-			.b5_push_#{ $i } { margin-left: $width; }
-		}
-	}
-
-	.g {
-		margin-left: -$grid-gutter-b5;
-		
-		> * {
-			padding-left: $grid-gutter-b5;
-		}
-	}
-
-	.b5_x5 { width: 20%; }
-	.b5_x7 { width: 14.28571428571429%; }
-
-	.b5_push_none { margin-left: 0; }
-
-}
-// $b6
-@media only screen and (min-width: $b6) {
-
-	@for $i from 1 through 24 {
-		$width: ($i/24) * 100%;
-
-		@if $i < 10 {
-			.b6_0#{ $i } { width: $width; }
-
-			.b6_push_0#{ $i } { margin-left: $width; }
-		} @else {
-
-			.b6_#{ $i } { width: $width; }
-
-			.b6_push_#{ $i } { margin-left: $width; }
-		}
-	}
-
-	.g {
-		margin-left: -$grid-gutter-b6;
-		
-		> * {
-			padding-left: $grid-gutter-b6;			
-		}
-	}
-
-	.b6_x5 { width: 20%; }
-	.b6_x7 { width: 14.28571428571429%; }
-
-	.b6_push_none { margin-left: 0; }
-
 }
