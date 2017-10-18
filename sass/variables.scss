@@ -26,6 +26,7 @@ $theme05:	#FFFFFF;	// Destroyer white
 
 /*
 	Notification colors
+	https://github.com/CastleCSS/castlecss-notifications
 */
 $alert:		#c0dbff;
 $warning:	#ffe283;
@@ -133,10 +134,14 @@ $font-sec: Arial, Helvetica, sans-serif;
 $font-size-default: 1.6rem;
 $line-height-default: 1.5;
 
-/* Breadcrumbs seperator */
+/*	Breadcrumbs seperator
+	https://github.com/CastleCSS/castlecss-buttons
+*/
 $breadcrumbs-separator: '\00bb';
 
-/* Form specific variables */
+/*	Form specific variables
+	https://github.com/CastleCSS/castlecss-forms
+*/
 
 /* Standard Inputs */
 $input-height: 4.8rem;
@@ -165,3 +170,14 @@ $input-transition: .1s all ease-in-out;
 /* Icons */
 $input-icon-color: #eee;
 $input-icon-bg-color: #797979;
+
+/*	Default sticker styles
+	https://github.com/CastleCSS/castlecss-stickers
+*/
+$sticker-font-size: 1.4rem;
+$sticker-font-size-large: 1.6rem;
+$sticker-bgcolor: $color03;
+$sticker-color: $color02;
+$sticker-text-transform: none;
+$sticker-weight: normal;
+$sticker-radius: $radius;
