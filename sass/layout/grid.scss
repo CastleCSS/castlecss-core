@@ -58,6 +58,10 @@
 		display: block;
 	}
 
+	/* Grid wrapping */
+	&.wrap 		{ 	flex-wrap: wrap;   }
+	&.nowrap 	{ 	flex-wrap: nowrap; }
+
 	/*	Grid items
 		Every direct child within .g is a grid item
 		Used to be .gi, the new method is less susceptible to errors
