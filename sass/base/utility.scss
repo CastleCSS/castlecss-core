@@ -165,6 +165,43 @@
 .img-right img, .img-left img, .img-center img { display: block; margin: 0 auto .6; }
 .img-right figcaption, .img-left figcaption, .img-center figcaption { display: block; color: Gray; font-style: italic; }
 
+/* Flexbox utility classes */
+.flex {
+	display: flex;
+}
+
+.dir-row				{ flex-direction: row; 	  }
+.dir-row-reverse 		{ flex-direction: row-reverse; 	  }
+.dir-column 			{ flex-direction: column; }
+.dir-column-reverse 	{ flex-direction: column-reverse; }
+
+/* Grid wrapping */
+.fw-wrap 			{ 	flex-wrap: wrap;   }
+.fw-nowrap 			{ 	flex-wrap: nowrap; }
+
+/* Alignment */	
+
+/* Justify content */
+.jc-flex-start 		{	justify-content: flex-start;	}
+.jc-flex-end 		{	justify-content: flex-end;		}
+.jc-center 			{	justify-content: center;		}
+.jc-space-around	{	justify-content: space-around;	}
+.jc-space-between	{	justify-content: space-between;	}
+
+/* Align items */
+.ai-flex-start 		{	align-items: flex-start;		}
+.ai-flex-end 		{	align-items: flex-end;			}
+.ai-center 			{	align-items: center;			}
+.ai-space-around	{	align-items: baseline;			}
+.ai-stretch			{	align-items: stretch;			}
+
+/* Align content */
+.ac-flex-start 		{	align-content: flex-start;		}
+.ac-flex-end 		{	align-content: flex-end;		}
+.ac-center 			{	align-content: center;			}
+.ac-space-around	{	align-content: space-around;	}
+.ac-space-between	{	align-content: space-between; 	}
+
 @media only screen and (min-width: $b3) {
 	.img-right { float: right; margin: .8rem 0 1.6rem 4.8rem; }
 	.img-left { float: left; margin: .8rem 4.8rem 1.6rem 0;  }

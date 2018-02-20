@@ -40,7 +40,7 @@
 	
 	/* Make children of grid items equal height */
 	&-equal-height {
-
+		
 		> * {
 			display: flex;
 
@@ -58,38 +58,9 @@
 		display: block;
 	}
 
-
-	&.dir-row				{ flex-direction: row; 	  }
-	&.dir-row-reverse 		{ flex-direction: row-reverse; 	  }
-	&.dir-column 			{ flex-direction: column; }
-	&.dir-column-reverse 	{ flex-direction: column-reverse; }
-	
 	/* Grid wrapping */
-	&.wrap 	 { 	flex-wrap: wrap;   }
-	&.nowrap { 	flex-wrap: nowrap; }
-
-	/* Alignment */	
-
-	/* Justify content */
-	&.jc-flex-start 	{	justify-content: flex-start;	}
-	&.jc-flex-end 		{	justify-content: flex-end;		}
-	&.jc-center 		{	justify-content: center;		}
-	&.jc-space-around	{	justify-content: space-around;	}
-	&.jc-space-between	{	justify-content: space-between;	}
-
-	/* Align items */
-	&.ai-flex-start 	{	align-items: flex-start;		}
-	&.ai-flex-end 		{	align-items: flex-end;			}
-	&.ai-center 		{	align-items: center;			}
-	&.ai-space-around	{	align-items: baseline;			}
-	&.ai-stretch		{	align-items: stretch;			}
-
-	/* Align content */
-	&.ac-flex-start 	{	align-content: flex-start;		}
-	&.ac-flex-end 		{	align-content: flex-end;		}
-	&.ac-center 		{	align-content: center;			}
-	&.ac-space-around	{	align-content: space-around;	}
-	&.ac-space-between	{	align-content: space-between; 	}
+	&.wrap 		{ 	flex-wrap: wrap;   }
+	&.nowrap 	{ 	flex-wrap: nowrap; }
 
 	/*	Grid items
 		Every direct child within .g is a grid item
